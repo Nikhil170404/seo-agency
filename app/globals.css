@@ -4,26 +4,38 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #0F172A;
-  --surface: #F8FAFC;
-  --surface-2: #F1F5F9;
-  --border: #E2E8F0;
-  --text-secondary: #64748B;
-  --accent: #059669;
+  --foreground: #0A0F1E;
+  --surface: #F7F8FA;
+  --surface-2: #EFF1F5;
+  --border: #E1E5EE;
+  --border-subtle: #ECF0F6;
+  --text-secondary: #5A6478;
+  --text-tertiary: #96A0B5;
+  --accent: #047857;
+  --accent-mid: #059669;
   --accent-light: #D1FAE5;
   --accent-dim: #ECFDF5;
+  --ink-900: #0A0F1E;
+  --ink-700: #1E293B;
+  --ink-500: #5A6478;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'DM Sans', -apple-system, sans-serif;
+  font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  line-height: 1.6;
 }
 
 .font-display {
@@ -36,4 +48,70 @@ body {
 
 .text-balance {
   text-wrap: balance;
+}
+
+/* Nav link underline animation */
+.nav-link {
+  position: relative;
+  display: inline-block;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background: var(--accent-mid);
+  transition: width 0.22s ease;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Stat ticker */
+.stat-ticker {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum';
+}
+
+/* Section divider line */
+.section-rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+/* GSC chart mockup lines */
+.chart-line {
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  animation: draw 1.6s ease forwards;
+  animation-delay: 0.3s;
+}
+@keyframes draw {
+  to { stroke-dashoffset: 0; }
+}
+
+/* Fade-up utility */
+.fade-up {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: fadeUp 0.5s ease forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Pricing card hover */
+.plan-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.plan-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Tag pill hover */
+.tag-pill {
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
 }
