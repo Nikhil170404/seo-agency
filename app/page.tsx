@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import Link from "next/link";
 import {
   ArrowRight,
   Check,
@@ -50,12 +51,60 @@ const HOW_IT_WORKS = [
 ];
 
 const INDUSTRIES = [
-  { category: "Messaging & Automation", examples: ["manychat alternative", "zoko alternative", "interakt alternative"], color: "bg-emerald-50 text-emerald-700 border-emerald-200" },
-  { category: "CRM & Sales", examples: ["hubspot alternative", "salesforce alternative", "zoho crm alternative"], color: "bg-blue-50 text-blue-700 border-blue-200" },
-  { category: "Customer Support", examples: ["zendesk alternative", "freshdesk alternative", "intercom alternative"], color: "bg-violet-50 text-violet-700 border-violet-200" },
-  { category: "SEO Tools", examples: ["ahrefs alternative", "semrush alternative", "moz alternative"], color: "bg-amber-50 text-amber-700 border-amber-200" },
-  { category: "HR Tech", examples: ["bamboohr alternative", "darwinbox alternative", "workday alternative"], color: "bg-rose-50 text-rose-700 border-rose-200" },
-  { category: "Project Management", examples: ["jira alternative", "asana alternative", "notion alternative"], color: "bg-sky-50 text-sky-700 border-sky-200" },
+  {
+    category: "Messaging & Automation",
+    examples: [
+      { label: "manychat alternative", href: "/manychat-alternative" },
+      { label: "zoko alternative", href: "/zoko-alternative" },
+      { label: "interakt alternative", href: "/interakt-alternative" },
+    ],
+    color: "bg-emerald-50 text-emerald-700 border-emerald-200",
+  },
+  {
+    category: "CRM & Sales",
+    examples: [
+      { label: "hubspot alternative", href: "/hubspot-alternative" },
+      { label: "salesforce alternative", href: "/salesforce-alternative" },
+      { label: "zoho crm alternative", href: "/zoho-crm-alternative" },
+    ],
+    color: "bg-blue-50 text-blue-700 border-blue-200",
+  },
+  {
+    category: "Customer Support",
+    examples: [
+      { label: "zendesk alternative", href: "/zendesk-alternative" },
+      { label: "freshdesk alternative", href: "/freshdesk-alternative" },
+      { label: "intercom alternative", href: "/intercom-alternative" },
+    ],
+    color: "bg-violet-50 text-violet-700 border-violet-200",
+  },
+  {
+    category: "SEO Tools",
+    examples: [
+      { label: "ahrefs alternative", href: "/ahrefs-alternative" },
+      { label: "semrush alternative", href: "/semrush-alternative" },
+      { label: "moz alternative", href: "/moz-alternative" },
+    ],
+    color: "bg-amber-50 text-amber-700 border-amber-200",
+  },
+  {
+    category: "HR Tech",
+    examples: [
+      { label: "bamboohr alternative", href: "/bamboohr-alternative" },
+      { label: "darwinbox alternative", href: "/darwinbox-alternative" },
+      { label: "workday alternative", href: "/workday-alternative" },
+    ],
+    color: "bg-rose-50 text-rose-700 border-rose-200",
+  },
+  {
+    category: "Project Management",
+    examples: [
+      { label: "jira alternative", href: "/jira-alternative" },
+      { label: "asana alternative", href: "/asana-alternative" },
+      { label: "notion alternative", href: "/notion-alternative" },
+    ],
+    color: "bg-sky-50 text-sky-700 border-sky-200",
+  },
 ];
 
 const CASE_STUDY_METRICS = [
@@ -370,12 +419,13 @@ export default function Home() {
               </h3>
               <div className="flex flex-wrap gap-2">
                 {ind.examples.map((ex) => (
-                  <span
-                    key={ex}
-                    className={`text-xs font-medium px-2.5 py-1 rounded-full border ${ind.color}`}
+                  <Link
+                    key={ex.label}
+                    href={ex.href}
+                    className={`text-xs font-medium px-2.5 py-1 rounded-full border hover:opacity-80 transition-opacity ${ind.color}`}
                   >
-                    {ex}
-                  </span>
+                    {ex.label}
+                  </Link>
                 ))}
               </div>
             </div>
