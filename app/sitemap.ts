@@ -21,20 +21,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${BASE_URL}/wati-alternative`,
       lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "monthly" as const,
+      priority: 0.85,
     },
     {
       url: `${BASE_URL}/zoko-alternative`,
       lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "monthly" as const,
+      priority: 0.82,
     },
     {
       url: `${BASE_URL}/interakt-alternative`,
       lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.8,
+      changeFrequency: "monthly" as const,
+      priority: 0.82,
     },
     {
       url: `${BASE_URL}/intercom-alternative`,
