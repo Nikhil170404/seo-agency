@@ -5,7 +5,7 @@ import { Check, X, Star, ArrowRight, ChevronRight, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "7 Best Intercom Alternatives in 2026 (Cheaper Customer Messaging) — GoPinKaro",
   description:
-    "Intercom alternatives compared honestly: pricing, WhatsApp support, live chat, and automation. Intercom starts at $74/mo — these tools do more for less. Updated September 2026.",
+    "Intercom alternatives compared honestly: pricing, WhatsApp support, live chat, and automation. Intercom Essential starts at $29/seat/month but the real bill is far higher — these tools do more for less. Updated September 2026.",
   keywords: [
     "intercom alternative",
     "intercom alternatives",
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "7 Best Intercom Alternatives in 2026 (Cheaper Customer Messaging)",
     description:
-      "Intercom starts at $74/mo and charges per seat. These alternatives give you live chat, WhatsApp, and automation for a fraction of the price.",
+      "Intercom Essential starts at $29/seat/month but Fin AI adds $0.99 per resolved outcome and median annual spend is $36K+. These alternatives give you live chat and automation for far less.",
     type: "article",
   },
   alternates: {
@@ -30,20 +30,23 @@ const TOOLS = [
   {
     rank: 1,
     name: "ReplyKaro",
-    tagline: "Best Intercom Alternative with WhatsApp + Instagram",
-    badge: "Top Pick",
-    badgeColor: "bg-emerald-100 text-emerald-700",
-    price: "Free forever · ₹99/mo paid",
-    bestFor: "Indian businesses and D2C brands wanting WhatsApp Business API + Instagram DM automation without Intercom's high USD pricing",
-    channels: ["WhatsApp", "Instagram", "Facebook"],
+    tagline: "Best Alternative for Instagram DM Automation (Not Live Chat)",
+    badge: "Instagram Automation",
+    badgeColor: "bg-pink-100 text-pink-700",
+    price: "Free · ₹99/mo ($3/mo) · $9/mo Pro",
+    bestFor: "Brands whose customer channel is Instagram — comment-to-DM flows, story reply automation, Follow Gate. Not a live chat replacement; a different channel entirely.",
+    channels: ["Instagram DMs only"],
     pros: [
-      "Free Forever plan — no credit card required",
-      "₹99/mo vs Intercom's $74/mo (~₹6,200) minimum",
-      "INR billing via UPI & Razorpay — no forex + GST on USD",
-      "WhatsApp Business API + Instagram DM in one dashboard",
-      "Automated flows, broadcasts, and drip sequences",
+      "Free plan: 1,000 Instagram DMs/month — no credit card",
+      "₹99/mo for 30,000 DMs vs Intercom's $29+/seat for live chat",
+      "Comment → DM automation when someone comments on your reel",
+      "Follow Gate: users must follow before they get your link",
+      "Meta verified — no account bans since launch",
     ],
-    cons: ["No built-in live chat widget (web)", "Less mature CRM features than Intercom"],
+    cons: [
+      "Instagram DMs only — no live chat widget, no WhatsApp, no email",
+      "Not a direct Intercom replacement — solves a different problem (Instagram vs web chat)",
+    ],
     rating: 4.8,
   },
   {
@@ -165,19 +168,19 @@ const TOOLS = [
 const FAQS = [
   {
     q: "What is the best Intercom alternative for small businesses?",
-    a: "Crisp (free plan for 2 agents) and HubSpot Live Chat (free with HubSpot CRM) are the best Intercom alternatives for small businesses. For Indian businesses needing WhatsApp + Instagram automation instead of live chat, ReplyKaro at ₹99/month is the most affordable alternative, covering channels Intercom doesn't even support.",
+    a: "Crisp (free for 2 agents) and HubSpot Live Chat (free with HubSpot CRM) are the best live chat alternatives for small businesses. Tidio ($29/mo) adds Lyro AI that auto-resolves up to 70% of queries — worth it if you have high chat volume. For brands whose primary channel is Instagram rather than web chat, ReplyKaro at ₹99/month handles Instagram DM automation, but it is not a live chat tool.",
   },
   {
     q: "Why are people looking for Intercom alternatives?",
-    a: "Intercom's pricing starts at $74/month and scales steeply with seats and usage. Common pain points: (1) per-seat pricing — a 5-person team easily hits $300+/mo, (2) no WhatsApp Business API — Intercom is primarily live chat and email, (3) USD-only billing — Indian users pay GST on international transactions adding ~18% on top, (4) complexity — Intercom has many features most small businesses never use.",
+    a: "The advertised $29/seat/month Essential price understates what teams actually pay. Add Fin AI ($0.99 per resolved outcome, 50-outcome monthly minimum = $49.50 minimum just for AI), Copilot ($29/agent/month), usage-based WhatsApp and other channel fees, and the bill scales fast. Vendr data shows the median annual spend at $36,781. Salesforce's acquisition of Intercom (announced June 2026, pending close) has added pricing uncertainty for long-term contracts.",
   },
   {
     q: "Is there a free Intercom alternative?",
-    a: "Yes — Crisp has a free plan for up to 2 agents, HubSpot Live Chat is free with the HubSpot CRM, Tidio has a free plan with live chat and 3 AI conversations, and Chatwoot is fully open-source and free to self-host. ReplyKaro also has a Free Forever plan if your use case is WhatsApp + Instagram automation rather than website live chat.",
+    a: "Yes — Crisp (free for 2 agents), HubSpot Live Chat (free with CRM), Tidio (free live chat plan), and Chatwoot (open-source, self-hostable) are all free. Chatwoot is the most complete: it supports WhatsApp Business API, Instagram, Facebook, live chat, and email from a single inbox at zero cost if self-hosted.",
   },
   {
     q: "Does Intercom support WhatsApp?",
-    a: "Intercom does support WhatsApp Business as an add-on channel, but it is not its core strength and adds cost. If WhatsApp is your primary customer channel, tools like ReplyKaro, Wati, Interakt, or respond.io are purpose-built for WhatsApp Business API and will give you far more automation capabilities at a lower price.",
+    a: "Intercom supports WhatsApp Business as an add-on channel, but live chat and email are its core. If WhatsApp is your primary customer channel, purpose-built tools — Wati ($59/mo), Interakt (₹999/mo), or AiSensy (₹1,500/mo) — give you far more automation capability at a lower price. For Instagram DM automation, ReplyKaro (₹99/mo, Instagram-only) is the specialist option.",
   },
   {
     q: "What is the best open-source alternative to Intercom?",
@@ -273,14 +276,15 @@ export default function IntercomAlternativePage() {
               <span style={{ color: "var(--accent)" }}>Customer Messaging That Doesn't Cost a Fortune</span>
             </h1>
             <p className="text-lg mb-6" style={{ color: "var(--text-secondary)", maxWidth: "700px" }}>
-              Intercom starts at $74/month and scales quickly with seats. Whether you need live chat,
-              WhatsApp automation, or a full helpdesk — these alternatives cover the gap for less.
+              Intercom Essential starts at $29/seat/month (annual billing). Add Fin AI at $0.99 per resolved
+              outcome, Copilot at $29/agent/month, and a 10-seat team using AI hits $15K–$80K/year. The
+              tools below solve the same problem for far less.
             </p>
 
             <div className="p-4 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
               <p className="text-sm font-semibold mb-2">Quick picks:</p>
               <ul className="space-y-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>WhatsApp + Instagram:</span> ReplyKaro — ₹99/mo, free plan, channels Intercom doesn't have</li>
+                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Instagram DM automation:</span> ReplyKaro — ₹99/mo ($3/mo), free plan, Instagram-only</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Free live chat:</span> Crisp — free for 2 agents, $25/mo Pro</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Free with CRM:</span> HubSpot Live Chat — free forever with HubSpot CRM</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Open-source:</span> Chatwoot — self-host for free, own your data</li>
@@ -292,9 +296,9 @@ export default function IntercomAlternativePage() {
             <h2 className="font-display text-2xl font-bold mb-4">Why Teams Look for Intercom Alternatives</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { title: "Expensive at scale", desc: "Intercom's $74/mo starter is per workspace, but team seats add cost fast. A 5-agent support team can hit $300–500/mo with usage." },
-                { title: "No WhatsApp API", desc: "Intercom's core is web live chat and email. WhatsApp is an add-on — not the priority. Purpose-built WhatsApp tools do it better and cheaper." },
-                { title: "USD-only billing", desc: "Indian businesses pay 18% GST on USD invoices + forex conversion fees on top of Intercom's already high base price." },
+                { title: "Expensive at scale", desc: "Intercom Essential at $29/seat/month is just the floor. Fin AI ($0.99/resolved outcome), Copilot ($29/agent/month), and channel fees mean a 10-seat team routinely hits $15K–$80K/year according to Vendr data." },
+                { title: "Salesforce acquisition uncertainty", desc: "Salesforce agreed to acquire Intercom for ~$3.6B (announced June 2026, deal pending). Long-term pricing and product direction is unclear, making multi-year contracts riskier." },
+                { title: "USD-only billing", desc: "Indian businesses pay 18% GST on USD SaaS invoices plus forex conversion. At $29/seat/month with AI add-ons, effective INR cost gets steep fast." },
               ].map((item) => (
                 <div key={item.title} className="p-4 rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                   <p className="font-semibold text-sm mb-1">{item.title}</p>

@@ -34,11 +34,11 @@ const TOOLS = [
     tagline: "Best Overall Semrush Alternative",
     badge: "Best Overall",
     badgeColor: "bg-emerald-100 text-emerald-700",
-    price: "$129/mo (Lite)",
+    price: "$29/mo Starter · $129/mo Lite · $249/mo Standard",
     bestFor: "SEO professionals and link builders wanting the industry's best backlink database and cleaner UI than Semrush",
     features: ["Backlink Analysis", "Keyword Research", "Rank Tracking", "Site Audit", "Content Explorer"],
     pros: [
-      "$129/mo Lite — slightly cheaper than Semrush Pro",
+      "New $29/mo Starter plan (January 2026) — but Lite ($129/mo) needed for real SEO work",
       "Industry's best backlink database and index freshness",
       "Content Explorer for finding link-worthy content ideas",
       "Cleaner, faster UI than Semrush",
