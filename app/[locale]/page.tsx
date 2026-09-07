@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 import {
   ArrowRight,
   Check,
@@ -14,42 +15,7 @@ import {
   Globe,
   Star,
 } from "lucide-react";
-
-const NAV_LINKS = [
-  { label: "Services", href: "/saas-seo-agency" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Case Study", href: "#case-study" },
-  { label: "Pricing", href: "#pricing" },
-  { label: "FAQ", href: "#faq" },
-];
-
-const STATS = [
-  { value: "315", suffix: "x", label: "Clicks/day growth for Replykaro" },
-  { value: "90", suffix: " days", label: "Time to first page rankings" },
-  { value: "KD 10", suffix: "", label: "Avg keyword difficulty we target" },
-  { value: "2,874", suffix: "", label: "Monthly impressions unlocked" },
-];
-
-const HOW_IT_WORKS = [
-  {
-    step: "01",
-    icon: FileText,
-    title: "We build the page",
-    desc: "We research the keyword, write a 2,000+ word comparison page targeting buyers searching for your competitor's alternative. Full SEO — title, meta, schema, FAQ, internal links.",
-  },
-  {
-    step: "02",
-    icon: TrendingUp,
-    title: "It ranks on Google",
-    desc: "We submit, track, and optimize until your page hits top 10. Most pages rank within 30–60 days. We target keyword difficulty under 30 so ranking is predictable, not a gamble.",
-  },
-  {
-    step: "03",
-    icon: BarChart2,
-    title: "You get inbound traffic",
-    desc: "Buyers already switching from your competitor land on your page. No cold outreach. No ads. Pure organic traffic from people in buying mode — converting at 7.5% vs 1–2% for regular content.",
-  },
-];
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 const INDUSTRIES = [
   {
@@ -109,94 +75,109 @@ const INDUSTRIES = [
 ];
 
 const CASE_STUDY_METRICS = [
-  { label: "Clicks/day at start", value: "5" },
-  { label: "Clicks/day at 90 days", value: "315" },
-  { label: "Total impressions/day", value: "2,976" },
-  { label: "Avg. keyword position", value: "8.4" },
-  { label: "Keywords ranked", value: "109" },
-  { label: "Organic traffic value", value: "$41/mo" },
+  { labelKey: "clicksStart", value: "5" },
+  { labelKey: "clicks90", value: "315" },
+  { labelKey: "impressions", value: "2,976" },
+  { labelKey: "position", value: "8.4" },
+  { labelKey: "keywords", value: "109" },
+  { labelKey: "value", value: "$41/mo" },
 ];
 
-const PLANS = [
-  {
-    name: "Starter",
-    price: "$99",
-    period: "/month",
-    desc: "For early-stage SaaS getting into SEO for the first time.",
-    highlight: false,
-    features: [
-      "3 alternative pages built & published",
-      "Keyword research included",
-      "Full SEO — title, meta, schema",
-      "Monthly ranking report",
-      "1 revision per page",
-    ],
-    cta: "Get Started",
-  },
-  {
-    name: "Growth",
-    price: "$299",
-    period: "/month",
-    desc: "For companies ready to own their category's comparison traffic.",
-    highlight: true,
-    features: [
-      "10 alternative pages built & published",
-      "Competitor monitoring alerts",
-      "Weekly rank tracking dashboard",
-      "Content refresh when rankings drop",
-      "Priority Slack support",
-      "Unlimited revisions",
-    ],
-    cta: "Start Growing",
-  },
-  {
-    name: "Agency",
-    price: "$799",
-    period: "/month",
-    desc: "For agencies managing SEO for multiple SaaS clients.",
-    highlight: false,
-    features: [
-      "Unlimited pages across all clients",
-      "White-label reports",
-      "Client dashboard access",
-      "Dedicated account manager",
-      "Custom page templates",
-      "API access for publishing",
-    ],
-    cta: "Talk to Us",
-  },
-];
-
-const FAQS = [
-  {
-    q: "How quickly will my pages rank?",
-    a: "Most pages we build hit the top 10 within 30–60 days. We specifically target keywords with a difficulty score under 30 — meaning less competition and faster rankings. Your GSC data will show impressions within the first 2 weeks.",
-  },
-  {
-    q: "Do you write the content or do I?",
-    a: "We handle everything — keyword research, writing the 2,000+ word page, SEO metadata, FAQ section, comparison tables, and schema markup. You provide your product's features and pricing. That's it.",
-  },
-  {
-    q: "What if the page doesn't rank?",
-    a: "We monitor and optimize every page. If a page isn't climbing after 60 days, we rewrite, refresh, or rebuild it at no extra cost. We don't stop until it ranks.",
-  },
-  {
-    q: "Will this work for my industry?",
-    a: "If your competitor has buyers searching '[competitor] alternative' on Google — and almost every SaaS tool does — this works. We've identified opportunities across CRM, HR tech, messaging tools, SEO tools, customer support, and more.",
-  },
-  {
-    q: "Is $99/month really enough to get results?",
-    a: "Yes for the Starter plan. We focus on low-competition keywords with real volume. One ranked page bringing 50 visitors/month of buyers switching from your competitor is worth more than 5,000 visits of informational traffic.",
-  },
-  {
-    q: "Do you publish the pages on my website?",
-    a: "Yes. We publish directly to your domain via WordPress, Webflow, or as clean HTML you can drop anywhere. The pages live on YOUR domain — not ours — so all SEO authority stays with you.",
-  },
-];
+const HOW_IT_WORKS_ICONS = [FileText, TrendingUp, BarChart2];
 
 export default function Home() {
+  const t = useTranslations();
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const navLinks = [
+    { label: t("nav.services"), href: "/saas-seo-agency" },
+    { label: t("nav.howItWorks"), href: "#how-it-works" },
+    { label: t("nav.caseStudy"), href: "#case-study" },
+    { label: t("nav.pricing"), href: "#pricing" },
+    { label: t("nav.faq"), href: "#faq" },
+  ];
+
+  const stats = [
+    { value: "315", suffix: "x", label: t("stats.clicks") },
+    { value: "90", suffix: " days", label: t("stats.days") },
+    { value: "KD 10", suffix: "", label: t("stats.kd") },
+    { value: "2,874", suffix: "", label: t("stats.impressions") },
+  ];
+
+  const howItWorks = [
+    { step: "01", titleKey: "howItWorks.step1title", descKey: "howItWorks.step1desc" },
+    { step: "02", titleKey: "howItWorks.step2title", descKey: "howItWorks.step2desc" },
+    { step: "03", titleKey: "howItWorks.step3title", descKey: "howItWorks.step3desc" },
+  ];
+
+  const plans = [
+    {
+      nameKey: "pricing.starter.name",
+      priceKey: "pricing.starter.price",
+      periodKey: "pricing.starter.period",
+      descKey: "pricing.starter.desc",
+      ctaKey: "pricing.starter.cta",
+      highlight: false,
+      featureKeys: [
+        "pricing.starter.f1",
+        "pricing.starter.f2",
+        "pricing.starter.f3",
+        "pricing.starter.f4",
+        "pricing.starter.f5",
+      ],
+    },
+    {
+      nameKey: "pricing.growth.name",
+      priceKey: "pricing.growth.price",
+      periodKey: "pricing.growth.period",
+      descKey: "pricing.growth.desc",
+      ctaKey: "pricing.growth.cta",
+      highlight: true,
+      featureKeys: [
+        "pricing.growth.f1",
+        "pricing.growth.f2",
+        "pricing.growth.f3",
+        "pricing.growth.f4",
+        "pricing.growth.f5",
+        "pricing.growth.f6",
+      ],
+    },
+    {
+      nameKey: "pricing.agency.name",
+      priceKey: "pricing.agency.price",
+      periodKey: "pricing.agency.period",
+      descKey: "pricing.agency.desc",
+      ctaKey: "pricing.agency.cta",
+      highlight: false,
+      featureKeys: [
+        "pricing.agency.f1",
+        "pricing.agency.f2",
+        "pricing.agency.f3",
+        "pricing.agency.f4",
+        "pricing.agency.f5",
+        "pricing.agency.f6",
+      ],
+    },
+  ];
+
+  const faqs = [
+    { qKey: "faq.q1", aKey: "faq.a1" },
+    { qKey: "faq.q2", aKey: "faq.a2" },
+    { qKey: "faq.q3", aKey: "faq.a3" },
+    { qKey: "faq.q4", aKey: "faq.a4" },
+    { qKey: "faq.q5", aKey: "faq.a5" },
+    { qKey: "faq.q6", aKey: "faq.a6" },
+  ];
+
+  const caseMetricLabels: Record<string, string> = {
+    clicksStart: "Clicks/day at start",
+    clicks90: "Clicks/day at 90 days",
+    impressions: "Total impressions/day",
+    position: "Avg. keyword position",
+    keywords: "Keywords ranked",
+    value: "Organic traffic value",
+  };
 
   return (
     <div className="min-h-screen bg-white text-[#0F172A]">
@@ -212,40 +193,44 @@ export default function Home() {
             </span>
           </a>
 
-          <nav className="hidden md:flex items-center gap-8">
-            {NAV_LINKS.map((l) => (
+          <nav className="hidden md:flex items-center gap-7">
+            {navLinks.map((l) => (
               <a key={l.label} href={l.href} className="text-sm text-[#64748B] hover:text-[#0F172A] transition-colors font-medium">
                 {l.label}
               </a>
             ))}
           </nav>
 
-          <div className="hidden md:flex items-center gap-3">
-            <a href="#pricing" className="text-sm font-medium text-[#64748B] hover:text-[#0F172A] transition-colors">
-              View Pricing
+          <div className="hidden md:flex items-center gap-2">
+            <LanguageSwitcher />
+            <a href="#pricing" className="text-sm font-medium text-[#64748B] hover:text-[#0F172A] transition-colors px-2">
+              {t("nav.viewPricing")}
             </a>
             <a
               href="#pricing"
               className="text-sm font-semibold bg-[#059669] text-white px-4 py-2 rounded-lg hover:bg-[#047857] transition-colors"
             >
-              Get Started
+              {t("nav.getStarted")}
             </a>
           </div>
 
-          <button className="md:hidden" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-            {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
-          </button>
+          <div className="flex md:hidden items-center gap-2">
+            <LanguageSwitcher />
+            <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+              {mobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
+            </button>
+          </div>
         </div>
 
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-[#E2E8F0] bg-white px-4 py-4 flex flex-col gap-4">
-            {NAV_LINKS.map((l) => (
+            {navLinks.map((l) => (
               <a key={l.label} href={l.href} className="text-sm font-medium text-[#0F172A]" onClick={() => setMobileMenuOpen(false)}>
                 {l.label}
               </a>
             ))}
             <a href="#pricing" className="text-sm font-semibold bg-[#059669] text-white px-4 py-2.5 rounded-lg text-center">
-              Get Started
+              {t("nav.getStarted")}
             </a>
           </div>
         )}
@@ -256,24 +241,21 @@ export default function Home() {
         <div className="max-w-3xl">
           <div className="inline-flex items-center gap-2 bg-[#ECFDF5] text-[#059669] text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border border-[#D1FAE5]">
             <Star size={12} fill="currentColor" />
-            Proven: 0 → 315 clicks/day in 90 days for Replykaro
+            {t("hero.badge")}
           </div>
 
           <h1
             className="text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6 text-balance"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
           >
-            Turn competitor
+            {t("hero.headline1")}
             <br />
-            searches into{" "}
-            <span className="text-[#059669]">your customers</span>
+            {t("hero.headline2")}{" "}
+            <span className="text-[#059669]">{t("hero.headline3")}</span>
           </h1>
 
           <p className="text-lg md:text-xl text-[#64748B] leading-relaxed mb-10 max-w-2xl">
-            We build and rank{" "}
-            <span className="text-[#0F172A] font-medium">"[Competitor] Alternative"</span> pages
-            for SaaS companies. Buyers already switching from your competitors
-            land on your page — not theirs.
+            {t("hero.subheadline")}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-3">
@@ -281,14 +263,14 @@ export default function Home() {
               href="#pricing"
               className="inline-flex items-center justify-center gap-2 bg-[#059669] text-white font-semibold px-6 py-3.5 rounded-lg hover:bg-[#047857] transition-colors text-sm"
             >
-              Start ranking now
+              {t("hero.ctaPrimary")}
               <ArrowRight size={16} />
             </a>
             <a
               href="#case-study"
               className="inline-flex items-center justify-center gap-2 bg-white text-[#0F172A] font-semibold px-6 py-3.5 rounded-lg border border-[#E2E8F0] hover:border-[#CBD5E1] transition-colors text-sm"
             >
-              See the proof
+              {t("hero.ctaSecondary")}
             </a>
           </div>
         </div>
@@ -297,7 +279,7 @@ export default function Home() {
       {/* Stats bar */}
       <section className="border-y border-[#E2E8F0] bg-[#F8FAFC]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
-          {STATS.map((s) => (
+          {stats.map((s) => (
             <div key={s.label}>
               <div
                 className="text-3xl font-bold text-[#059669] mb-1"
@@ -316,19 +298,15 @@ export default function Home() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">The problem</p>
+            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">{t("problem.label")}</p>
             <h2
               className="text-3xl md:text-4xl font-bold leading-tight mb-6 text-balance"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              2,874 people searched<br />"Zoko alternative"<br />last month.
+              {t("problem.headline")}
             </h2>
-            <p className="text-[#64748B] text-lg leading-relaxed mb-6">
-              Every one of them was ready to switch tools. Their credit cards were out. And your product wasn't on the page they found.
-            </p>
-            <p className="text-[#64748B] leading-relaxed">
-              "Alternative" and "vs" searches are the highest-converting traffic on the internet — 7.5% conversion rate vs 1–2% for everything else. These are buyers, not browsers.
-            </p>
+            <p className="text-[#64748B] text-lg leading-relaxed mb-6">{t("problem.p1")}</p>
+            <p className="text-[#64748B] leading-relaxed">{t("problem.p2")}</p>
           </div>
 
           <div className="bg-[#F8FAFC] rounded-2xl border border-[#E2E8F0] p-6 space-y-4">
@@ -362,37 +340,42 @@ export default function Home() {
       <section id="how-it-works" className="bg-[#F8FAFC] border-y border-[#E2E8F0]">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
           <div className="text-center mb-16">
-            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">How it works</p>
+            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">{t("howItWorks.label")}</p>
             <h2
               className="text-3xl md:text-4xl font-bold text-balance"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              Three steps. One outcome: rankings.
+              {t("howItWorks.headline")}
             </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            {HOW_IT_WORKS.map((step) => (
-              <div key={step.step} className="bg-white rounded-2xl border border-[#E2E8F0] p-8">
-                <div className="flex items-center gap-3 mb-6">
-                  <span
-                    className="text-xs font-bold text-[#059669]"
-                    style={{ fontFamily: "'JetBrains Mono', monospace" }}
+            {howItWorks.map((step, i) => {
+              const Icon = HOW_IT_WORKS_ICONS[i];
+              return (
+                <div key={step.step} className="bg-white rounded-2xl border border-[#E2E8F0] p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <span
+                      className="text-xs font-bold text-[#059669]"
+                      style={{ fontFamily: "'JetBrains Mono', monospace" }}
+                    >
+                      {step.step}
+                    </span>
+                    <div className="h-px flex-1 bg-[#E2E8F0]" />
+                    <Icon size={16} className="text-[#059669]" />
+                  </div>
+                  <h3
+                    className="text-xl font-bold mb-3"
+                    style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                   >
-                    {step.step}
-                  </span>
-                  <div className="h-px flex-1 bg-[#E2E8F0]" />
-                  <step.icon size={16} className="text-[#059669]" />
+                    {t(step.titleKey as Parameters<typeof t>[0])}
+                  </h3>
+                  <p className="text-[#64748B] text-sm leading-relaxed">
+                    {t(step.descKey as Parameters<typeof t>[0])}
+                  </p>
                 </div>
-                <h3
-                  className="text-xl font-bold mb-3"
-                  style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-                >
-                  {step.title}
-                </h3>
-                <p className="text-[#64748B] text-sm leading-relaxed">{step.desc}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -400,12 +383,12 @@ export default function Home() {
       {/* Industries */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
         <div className="mb-12">
-          <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">What we rank</p>
+          <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">{t("industries.label")}</p>
           <h2
             className="text-3xl md:text-4xl font-bold text-balance"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
           >
-            Every category. Every competitor.
+            {t("industries.headline")}
           </h2>
         </div>
 
@@ -439,38 +422,31 @@ export default function Home() {
         <div className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-xs font-semibold text-[#34D399] uppercase tracking-widest mb-4">Case study</p>
+              <p className="text-xs font-semibold text-[#34D399] uppercase tracking-widest mb-4">{t("caseStudy.label")}</p>
               <h2
                 className="text-3xl md:text-4xl font-bold leading-tight mb-6"
                 style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
               >
-                Replykaro: 0 to 315 clicks/day in 90 days
+                {t("caseStudy.headline")}
               </h2>
-              <p className="text-slate-400 leading-relaxed mb-6">
-                Replykaro is an Instagram DM automation tool. When we started, it had 5 clicks per day. No brand keywords, no backlinks, no paid ads.
-              </p>
-              <p className="text-slate-400 leading-relaxed mb-8">
-                We targeted low-competition "alternative" and "free tool" keywords — exactly the searches where buyers are switching from paid tools to free ones. In 90 days, it hit 315 clicks/day with 109 keywords ranking on Google.
-              </p>
+              <p className="text-slate-400 leading-relaxed mb-6">{t("caseStudy.p1")}</p>
+              <p className="text-slate-400 leading-relaxed mb-8">{t("caseStudy.p2")}</p>
               <div className="inline-flex items-center gap-2 text-sm text-[#34D399] font-medium">
                 <Globe size={14} />
-                replykaro.com · Live today
+                {t("caseStudy.live")}
               </div>
             </div>
 
             <div className="grid grid-cols-2 gap-4">
               {CASE_STUDY_METRICS.map((m) => (
-                <div
-                  key={m.label}
-                  className="bg-white/5 border border-white/10 rounded-xl p-5"
-                >
+                <div key={m.labelKey} className="bg-white/5 border border-white/10 rounded-xl p-5">
                   <div
                     className="text-2xl font-bold text-white mb-1"
                     style={{ fontFamily: "'JetBrains Mono', monospace" }}
                   >
                     {m.value}
                   </div>
-                  <div className="text-xs text-slate-400">{m.label}</div>
+                  <div className="text-xs text-slate-400">{caseMetricLabels[m.labelKey]}</div>
                 </div>
               ))}
             </div>
@@ -481,22 +457,20 @@ export default function Home() {
       {/* Pricing */}
       <section id="pricing" className="max-w-6xl mx-auto px-4 sm:px-6 py-20 md:py-28">
         <div className="text-center mb-16">
-          <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">Pricing</p>
+          <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">{t("pricing.label")}</p>
           <h2
             className="text-3xl md:text-4xl font-bold mb-4"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
           >
-            Simple, results-based pricing
+            {t("pricing.headline")}
           </h2>
-          <p className="text-[#64748B] max-w-md mx-auto">
-            No retainers. No agency fluff. Pay for pages that rank — and if they don't, we fix them for free.
-          </p>
+          <p className="text-[#64748B] max-w-md mx-auto">{t("pricing.subheadline")}</p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-6">
-          {PLANS.map((plan) => (
+          {plans.map((plan) => (
             <div
-              key={plan.name}
+              key={plan.nameKey}
               className={`rounded-2xl p-8 border flex flex-col ${
                 plan.highlight
                   ? "bg-[#059669] text-white border-[#059669] shadow-xl shadow-emerald-200"
@@ -506,40 +480,42 @@ export default function Home() {
               <div className="mb-8">
                 {plan.highlight && (
                   <div className="text-xs font-bold uppercase tracking-widest text-emerald-200 mb-3">
-                    Most Popular
+                    {t("pricing.mostPopular")}
                   </div>
                 )}
                 <h3
                   className={`text-xl font-bold mb-2 ${plan.highlight ? "text-white" : "text-[#0F172A]"}`}
                   style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                 >
-                  {plan.name}
+                  {t(plan.nameKey as Parameters<typeof t>[0])}
                 </h3>
                 <p className={`text-sm mb-6 ${plan.highlight ? "text-emerald-100" : "text-[#64748B]"}`}>
-                  {plan.desc}
+                  {t(plan.descKey as Parameters<typeof t>[0])}
                 </p>
                 <div className="flex items-end gap-1">
                   <span
                     className={`text-4xl font-bold ${plan.highlight ? "text-white" : "text-[#0F172A]"}`}
                     style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
                   >
-                    {plan.price}
+                    {t(plan.priceKey as Parameters<typeof t>[0])}
                   </span>
                   <span className={`text-sm mb-1.5 ${plan.highlight ? "text-emerald-100" : "text-[#64748B]"}`}>
-                    {plan.period}
+                    {t(plan.periodKey as Parameters<typeof t>[0])}
                   </span>
                 </div>
               </div>
 
               <ul className="space-y-3 flex-1 mb-8">
-                {plan.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2.5 text-sm">
+                {plan.featureKeys.map((fk) => (
+                  <li key={fk} className="flex items-start gap-2.5 text-sm">
                     <Check
                       size={15}
                       className={`mt-0.5 shrink-0 ${plan.highlight ? "text-emerald-200" : "text-[#059669]"}`}
                       strokeWidth={2.5}
                     />
-                    <span className={plan.highlight ? "text-emerald-50" : "text-[#475569]"}>{f}</span>
+                    <span className={plan.highlight ? "text-emerald-50" : "text-[#475569]"}>
+                      {t(fk as Parameters<typeof t>[0])}
+                    </span>
                   </li>
                 ))}
               </ul>
@@ -552,16 +528,16 @@ export default function Home() {
                     : "bg-[#059669] text-white hover:bg-[#047857]"
                 }`}
               >
-                {plan.cta}
+                {t(plan.ctaKey as Parameters<typeof t>[0])}
               </a>
             </div>
           ))}
         </div>
 
         <p className="text-center text-sm text-[#64748B] mt-8">
-          Based in India? All plans available in INR.{" "}
+          {t("pricing.inrNote")}{" "}
           <a href="mailto:hello@gopinkaro.com" className="text-[#059669] font-medium underline underline-offset-2">
-            Contact us for INR pricing.
+            {t("pricing.inrCta")}
           </a>
         </p>
       </section>
@@ -570,26 +546,25 @@ export default function Home() {
       <section id="faq" className="bg-[#F8FAFC] border-t border-[#E2E8F0]">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 py-20 md:py-28">
           <div className="text-center mb-12">
-            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">FAQ</p>
+            <p className="text-xs font-semibold text-[#059669] uppercase tracking-widest mb-4">{t("faq.label")}</p>
             <h2
               className="text-3xl md:text-4xl font-bold"
               style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
             >
-              Questions we get asked
+              {t("faq.headline")}
             </h2>
           </div>
 
           <div className="space-y-2">
-            {FAQS.map((faq, i) => (
-              <div
-                key={i}
-                className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden"
-              >
+            {faqs.map((faq, i) => (
+              <div key={i} className="bg-white border border-[#E2E8F0] rounded-xl overflow-hidden">
                 <button
                   className="w-full flex items-center justify-between px-6 py-5 text-left"
                   onClick={() => setOpenFaq(openFaq === i ? null : i)}
                 >
-                  <span className="font-semibold text-sm text-[#0F172A] pr-4">{faq.q}</span>
+                  <span className="font-semibold text-sm text-[#0F172A] pr-4">
+                    {t(faq.qKey as Parameters<typeof t>[0])}
+                  </span>
                   <ChevronDown
                     size={16}
                     className={`text-[#64748B] shrink-0 transition-transform duration-200 ${openFaq === i ? "rotate-180" : ""}`}
@@ -597,7 +572,9 @@ export default function Home() {
                 </button>
                 {openFaq === i && (
                   <div className="px-6 pb-5">
-                    <p className="text-sm text-[#64748B] leading-relaxed">{faq.a}</p>
+                    <p className="text-sm text-[#64748B] leading-relaxed">
+                      {t(faq.aKey as Parameters<typeof t>[0])}
+                    </p>
                   </div>
                 )}
               </div>
@@ -613,16 +590,14 @@ export default function Home() {
             className="text-3xl md:text-4xl font-bold mb-4 text-[#0F172A] text-balance"
             style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
           >
-            Your competitor's alternative keyword<br />is ranking right now.
+            {t("cta.headline")}
           </h2>
-          <p className="text-[#64748B] mb-8 max-w-md mx-auto">
-            Every day without the page is another day of buyers going to someone else. Let's fix that.
-          </p>
+          <p className="text-[#64748B] mb-8 max-w-md mx-auto">{t("cta.subheadline")}</p>
           <a
             href="#pricing"
             className="inline-flex items-center gap-2 bg-[#059669] text-white font-semibold px-8 py-4 rounded-lg hover:bg-[#047857] transition-colors"
           >
-            Get your first page ranked
+            {t("cta.button")}
             <ArrowRight size={16} />
           </a>
         </div>
@@ -635,16 +610,13 @@ export default function Home() {
             <div className="w-6 h-6 rounded-md bg-[#059669] flex items-center justify-center">
               <Zap size={12} className="text-white" fill="white" />
             </div>
-            <span
-              className="font-bold text-sm"
-              style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}
-            >
+            <span className="font-bold text-sm" style={{ fontFamily: "'Bricolage Grotesque', sans-serif" }}>
               GoPinKaro
             </span>
           </div>
 
           <div className="flex items-center gap-6">
-            {NAV_LINKS.map((l) => (
+            {navLinks.map((l) => (
               <a key={l.label} href={l.href} className="text-xs text-[#64748B] hover:text-[#0F172A] transition-colors">
                 {l.label}
               </a>
@@ -652,7 +624,7 @@ export default function Home() {
           </div>
 
           <p className="text-xs text-[#94A3B8]">
-            © {new Date().getFullYear()} GoPinKaro. All rights reserved.
+            © {new Date().getFullYear()} GoPinKaro. {t("footer.rights")}
           </p>
         </div>
       </footer>

@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "services": "Dienstleistungen",
+    "howItWorks": "Wie es funktioniert",
+    "caseStudy": "Fallstudie",
+    "pricing": "Preise",
+    "faq": "FAQ",
+    "viewPricing": "Preise ansehen",
+    "getStarted": "Loslegen"
+  },
+  "hero": {
+    "badge": "Bewiesen: 0 → 315 Klicks/Tag in 90 Tagen für Replykaro",
+    "headline1": "Verwandle Konkurrenz-",
+    "headline2": "suchen in",
+    "headline3": "deine Kunden",
+    "subheadline": "Wir erstellen und ranken \"[Konkurrent] Alternative\"-Seiten für SaaS-Unternehmen. Käufer, die von deinen Konkurrenten wechseln, landen auf deiner Seite – nicht auf deren.",
+    "ctaPrimary": "Jetzt ranken",
+    "ctaSecondary": "Beweis ansehen"
+  },
+  "stats": {
+    "clicks": "Klicks/Tag-Wachstum für Replykaro",
+    "days": "Zeit bis zur Erstseiten-Platzierung",
+    "kd": "Durchschn. Keyword-Schwierigkeit, die wir anvisieren",
+    "impressions": "Monatliche Impressionen freigeschaltet"
+  },
+  "problem": {
+    "label": "Das Problem",
+    "headline": "2.874 Menschen suchten letzten Monat nach \"Zoko Alternative\".",
+    "p1": "Jeder von ihnen war bereit, das Tool zu wechseln. Ihre Kreditkarten waren bereit. Und dein Produkt war nicht auf der Seite, die sie gefunden haben.",
+    "p2": "\"Alternative\"- und \"vs\"-Suchen sind der Traffic mit der höchsten Konversionsrate im Internet — 7,5% Konversionsrate vs. 1–2% für alles andere. Das sind Käufer, keine Browser."
+  },
+  "howItWorks": {
+    "label": "So funktioniert es",
+    "headline": "Drei Schritte. Ein Ergebnis: Rankings.",
+    "step1title": "Wir erstellen die Seite",
+    "step1desc": "Wir recherchieren das Keyword, schreiben eine Vergleichsseite mit 2.000+ Wörtern für Käufer, die nach der Alternative deines Konkurrenten suchen. Vollständiges SEO — Titel, Meta, Schema, FAQ, interne Links.",
+    "step2title": "Sie rankt auf Google",
+    "step2desc": "Wir einreichen, tracken und optimieren, bis deine Seite in die Top 10 kommt. Die meisten Seiten ranken innerhalb von 30–60 Tagen. Wir zielen auf Keywords mit einem Schwierigkeitsgrad unter 30.",
+    "step3title": "Du erhältst eingehenden Traffic",
+    "step3desc": "Käufer, die von deinem Konkurrenten wechseln, landen auf deiner Seite. Kein Cold Outreach. Keine Anzeigen. Reiner organischer Traffic von Menschen im Kaufmodus — mit 7,5% Konversionsrate."
+  },
+  "industries": {
+    "label": "Was wir ranken",
+    "headline": "Jede Kategorie. Jeder Konkurrent."
+  },
+  "caseStudy": {
+    "label": "Fallstudie",
+    "headline": "Replykaro: 0 auf 315 Klicks/Tag in 90 Tagen",
+    "p1": "Replykaro ist ein Tool zur Automatisierung von Instagram-DMs. Als wir anfingen, hatte es 5 Klicks pro Tag. Keine Marken-Keywords, keine Backlinks, keine bezahlten Anzeigen.",
+    "p2": "Wir zielten auf wettbewerbsschwache \"Alternative\"- und \"kostenloses Tool\"-Keywords — genau die Suchen, bei denen Käufer von bezahlten zu kostenlosen Tools wechseln. In 90 Tagen erreichte es 315 Klicks/Tag mit 109 Keywords auf Google.",
+    "live": "replykaro.com · Heute live"
+  },
+  "pricing": {
+    "label": "Preise",
+    "headline": "Einfache, ergebnisbasierte Preise",
+    "subheadline": "Keine Retainer. Kein Agentur-Blabla. Zahle für Seiten, die ranken — und wenn nicht, beheben wir es kostenlos.",
+    "mostPopular": "Am beliebtesten",
+    "inrNote": "In Indien? Alle Pläne in INR verfügbar.",
+    "inrCta": "Kontaktiere uns für INR-Preise.",
+    "starter": {
+      "name": "Starter",
+      "price": "$99",
+      "period": "/Monat",
+      "desc": "Für Early-Stage-SaaS, das zum ersten Mal SEO betreibt.",
+      "cta": "Loslegen",
+      "f1": "3 Alternative-Seiten erstellt & veröffentlicht",
+      "f2": "Keyword-Recherche inklusive",
+      "f3": "Vollständiges SEO — Titel, Meta, Schema",
+      "f4": "Monatlicher Ranking-Bericht",
+      "f5": "1 Überarbeitung pro Seite"
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$299",
+      "period": "/Monat",
+      "desc": "Für Unternehmen, die den Vergleichs-Traffic ihrer Kategorie dominieren wollen.",
+      "cta": "Wachstum starten",
+      "f1": "10 Alternative-Seiten erstellt & veröffentlicht",
+      "f2": "Konkurrenz-Monitoring-Alerts",
+      "f3": "Wöchentliches Rank-Tracking-Dashboard",
+      "f4": "Content-Refresh bei sinkenden Rankings",
+      "f5": "Prioritäts-Slack-Support",
+      "f6": "Unbegrenzte Überarbeitungen"
+    },
+    "agency": {
+      "name": "Agentur",
+      "price": "$799",
+      "period": "/Monat",
+      "desc": "Für Agenturen, die SEO für mehrere SaaS-Kunden verwalten.",
+      "cta": "Sprich mit uns",
+      "f1": "Unbegrenzte Seiten für alle Kunden",
+      "f2": "White-Label-Berichte",
+      "f3": "Kunden-Dashboard-Zugang",
+      "f4": "Dedizierter Account-Manager",
+      "f5": "Benutzerdefinierte Seitenvorlagen",
+      "f6": "API-Zugang für die Veröffentlichung"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "Fragen, die wir bekommen",
+    "q1": "Wie schnell werden meine Seiten ranken?",
+    "a1": "Die meisten Seiten, die wir erstellen, erreichen die Top 10 in 30–60 Tagen. Wir zielen speziell auf Keywords mit einem Schwierigkeitsgrad unter 30 — weniger Konkurrenz und schnellere Rankings. Deine GSC-Daten werden in den ersten 2 Wochen Impressionen zeigen.",
+    "q2": "Schreibt ihr den Content oder ich?",
+    "a2": "Wir kümmern uns um alles — Keyword-Recherche, Schreiben der 2.000+ Wörter langen Seite, SEO-Metadaten, FAQ-Bereich, Vergleichstabellen und Schema-Markup. Du lieferst die Funktionen und Preise deines Produkts. Das war's.",
+    "q3": "Was, wenn die Seite nicht rankt?",
+    "a3": "Wir überwachen und optimieren jede Seite. Wenn eine Seite nach 60 Tagen nicht steigt, schreiben, aktualisieren oder bauen wir sie ohne zusätzliche Kosten neu auf. Wir hören nicht auf, bis sie rankt.",
+    "q4": "Funktioniert das für meine Branche?",
+    "a4": "Wenn dein Konkurrent Käufer hat, die bei Google nach '[Konkurrent] Alternative' suchen — und das haben fast alle SaaS-Tools — funktioniert das. Wir haben Möglichkeiten in CRM, HR-Tech, Messaging-Tools, SEO-Tools, Kundensupport und mehr identifiziert.",
+    "q5": "Reichen $99/Monat wirklich für Ergebnisse?",
+    "a5": "Ja für den Starter-Plan. Wir konzentrieren uns auf wettbewerbsschwache Keywords mit echtem Volumen. Eine gerankte Seite, die 50 Besucher/Monat von Käufern bringt, die von deinem Konkurrenten wechseln, ist mehr wert als 5.000 Besuche von informativen Inhalten.",
+    "q6": "Veröffentlicht ihr die Seiten auf meiner Website?",
+    "a6": "Ja. Wir veröffentlichen direkt auf deiner Domain über WordPress, Webflow oder als sauberes HTML. Die Seiten leben auf DEINER Domain — nicht auf unserer — also bleibt alle SEO-Autorität bei dir."
+  },
+  "cta": {
+    "headline": "Das Alternative-Keyword deines Konkurrenten rankt gerade jetzt.",
+    "subheadline": "Jeder Tag ohne die Seite ist ein weiterer Tag, an dem Käufer zu jemand anderem gehen. Lass uns das ändern.",
+    "button": "Erste Seite ranken lassen"
+  },
+  "footer": {
+    "rights": "Alle Rechte vorbehalten."
+  }
+}

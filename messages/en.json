@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "services": "Services",
+    "howItWorks": "How It Works",
+    "caseStudy": "Case Study",
+    "pricing": "Pricing",
+    "faq": "FAQ",
+    "viewPricing": "View Pricing",
+    "getStarted": "Get Started"
+  },
+  "hero": {
+    "badge": "Proven: 0 → 315 clicks/day in 90 days for Replykaro",
+    "headline1": "Turn competitor",
+    "headline2": "searches into",
+    "headline3": "your customers",
+    "subheadline": "We build and rank \"[Competitor] Alternative\" pages for SaaS companies. Buyers already switching from your competitors land on your page — not theirs.",
+    "ctaPrimary": "Start ranking now",
+    "ctaSecondary": "See the proof"
+  },
+  "stats": {
+    "clicks": "Clicks/day growth for Replykaro",
+    "days": "Time to first page rankings",
+    "kd": "Avg keyword difficulty we target",
+    "impressions": "Monthly impressions unlocked"
+  },
+  "problem": {
+    "label": "The problem",
+    "headline": "2,874 people searched \"Zoko alternative\" last month.",
+    "p1": "Every one of them was ready to switch tools. Their credit cards were out. And your product wasn't on the page they found.",
+    "p2": "\"Alternative\" and \"vs\" searches are the highest-converting traffic on the internet — 7.5% conversion rate vs 1–2% for everything else. These are buyers, not browsers."
+  },
+  "howItWorks": {
+    "label": "How it works",
+    "headline": "Three steps. One outcome: rankings.",
+    "step1title": "We build the page",
+    "step1desc": "We research the keyword, write a 2,000+ word comparison page targeting buyers searching for your competitor's alternative. Full SEO — title, meta, schema, FAQ, internal links.",
+    "step2title": "It ranks on Google",
+    "step2desc": "We submit, track, and optimize until your page hits top 10. Most pages rank within 30–60 days. We target keyword difficulty under 30 so ranking is predictable, not a gamble.",
+    "step3title": "You get inbound traffic",
+    "step3desc": "Buyers already switching from your competitor land on your page. No cold outreach. No ads. Pure organic traffic from people in buying mode — converting at 7.5% vs 1–2% for regular content."
+  },
+  "industries": {
+    "label": "What we rank",
+    "headline": "Every category. Every competitor."
+  },
+  "caseStudy": {
+    "label": "Case study",
+    "headline": "Replykaro: 0 to 315 clicks/day in 90 days",
+    "p1": "Replykaro is an Instagram DM automation tool. When we started, it had 5 clicks per day. No brand keywords, no backlinks, no paid ads.",
+    "p2": "We targeted low-competition \"alternative\" and \"free tool\" keywords — exactly the searches where buyers are switching from paid tools to free ones. In 90 days, it hit 315 clicks/day with 109 keywords ranking on Google.",
+    "live": "replykaro.com · Live today"
+  },
+  "pricing": {
+    "label": "Pricing",
+    "headline": "Simple, results-based pricing",
+    "subheadline": "No retainers. No agency fluff. Pay for pages that rank — and if they don't, we fix them for free.",
+    "mostPopular": "Most Popular",
+    "inrNote": "Based in India? All plans available in INR.",
+    "inrCta": "Contact us for INR pricing.",
+    "starter": {
+      "name": "Starter",
+      "price": "$99",
+      "period": "/month",
+      "desc": "For early-stage SaaS getting into SEO for the first time.",
+      "cta": "Get Started",
+      "f1": "3 alternative pages built & published",
+      "f2": "Keyword research included",
+      "f3": "Full SEO — title, meta, schema",
+      "f4": "Monthly ranking report",
+      "f5": "1 revision per page"
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$299",
+      "period": "/month",
+      "desc": "For companies ready to own their category's comparison traffic.",
+      "cta": "Start Growing",
+      "f1": "10 alternative pages built & published",
+      "f2": "Competitor monitoring alerts",
+      "f3": "Weekly rank tracking dashboard",
+      "f4": "Content refresh when rankings drop",
+      "f5": "Priority Slack support",
+      "f6": "Unlimited revisions"
+    },
+    "agency": {
+      "name": "Agency",
+      "price": "$799",
+      "period": "/month",
+      "desc": "For agencies managing SEO for multiple SaaS clients.",
+      "cta": "Talk to Us",
+      "f1": "Unlimited pages across all clients",
+      "f2": "White-label reports",
+      "f3": "Client dashboard access",
+      "f4": "Dedicated account manager",
+      "f5": "Custom page templates",
+      "f6": "API access for publishing"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "Questions we get asked",
+    "q1": "How quickly will my pages rank?",
+    "a1": "Most pages we build hit the top 10 within 30–60 days. We specifically target keywords with a difficulty score under 30 — meaning less competition and faster rankings. Your GSC data will show impressions within the first 2 weeks.",
+    "q2": "Do you write the content or do I?",
+    "a2": "We handle everything — keyword research, writing the 2,000+ word page, SEO metadata, FAQ section, comparison tables, and schema markup. You provide your product's features and pricing. That's it.",
+    "q3": "What if the page doesn't rank?",
+    "a3": "We monitor and optimize every page. If a page isn't climbing after 60 days, we rewrite, refresh, or rebuild it at no extra cost. We don't stop until it ranks.",
+    "q4": "Will this work for my industry?",
+    "a4": "If your competitor has buyers searching '[competitor] alternative' on Google — and almost every SaaS tool does — this works. We've identified opportunities across CRM, HR tech, messaging tools, SEO tools, customer support, and more.",
+    "q5": "Is $99/month really enough to get results?",
+    "a5": "Yes for the Starter plan. We focus on low-competition keywords with real volume. One ranked page bringing 50 visitors/month of buyers switching from your competitor is worth more than 5,000 visits of informational traffic.",
+    "q6": "Do you publish the pages on my website?",
+    "a6": "Yes. We publish directly to your domain via WordPress, Webflow, or as clean HTML you can drop anywhere. The pages live on YOUR domain — not ours — so all SEO authority stays with you."
+  },
+  "cta": {
+    "headline": "Your competitor's alternative keyword is ranking right now.",
+    "subheadline": "Every day without the page is another day of buyers going to someone else. Let's fix that.",
+    "button": "Get your first page ranked"
+  },
+  "footer": {
+    "rights": "All rights reserved."
+  }
+}

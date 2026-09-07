@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "services": "Services",
+    "howItWorks": "Comment ça marche",
+    "caseStudy": "Étude de cas",
+    "pricing": "Tarifs",
+    "faq": "FAQ",
+    "viewPricing": "Voir les tarifs",
+    "getStarted": "Commencer"
+  },
+  "hero": {
+    "badge": "Prouvé : 0 → 315 clics/jour en 90 jours pour Replykaro",
+    "headline1": "Transformez les recherches",
+    "headline2": "de concurrents en",
+    "headline3": "vos clients",
+    "subheadline": "Nous créons et positionnons des pages \"[Concurrent] Alternative\" pour les entreprises SaaS. Les acheteurs qui quittent vos concurrents atterrissent sur votre page — pas la leur.",
+    "ctaPrimary": "Commencer à ranker",
+    "ctaSecondary": "Voir la preuve"
+  },
+  "stats": {
+    "clicks": "Croissance de clics/jour pour Replykaro",
+    "days": "Délai pour les classements en première page",
+    "kd": "Difficulté moyenne des mots-clés ciblés",
+    "impressions": "Impressions mensuelles débloquées"
+  },
+  "problem": {
+    "label": "Le problème",
+    "headline": "2 874 personnes ont cherché \"alternative à Zoko\" le mois dernier.",
+    "p1": "Chacune d'elles était prête à changer d'outil. Leurs cartes de crédit étaient sortis. Et votre produit n'était pas sur la page qu'elles ont trouvée.",
+    "p2": "Les recherches « alternative » et « vs » sont le trafic à la conversion la plus élevée sur internet — taux de 7,5% contre 1–2% pour tout le reste. Ce sont des acheteurs, pas des visiteurs."
+  },
+  "howItWorks": {
+    "label": "Comment ça marche",
+    "headline": "Trois étapes. Un résultat : des classements.",
+    "step1title": "Nous créons la page",
+    "step1desc": "Nous recherchons le mot-clé, rédigeons une page de comparaison de 2 000+ mots ciblant les acheteurs cherchant l'alternative de votre concurrent. SEO complet — titre, meta, schéma, FAQ, liens internes.",
+    "step2title": "Elle se classe sur Google",
+    "step2desc": "Nous soumettons, suivons et optimisons jusqu'à ce que votre page atteigne le top 10. La plupart des pages se classent en 30–60 jours. Nous ciblons des mots-clés avec une difficulté inférieure à 30.",
+    "step3title": "Vous recevez du trafic entrant",
+    "step3desc": "Les acheteurs quittant votre concurrent arrivent sur votre page. Pas de prospection. Pas de publicités. Du trafic organique pur de personnes en mode achat — avec un taux de conversion de 7,5%."
+  },
+  "industries": {
+    "label": "Ce que nous classons",
+    "headline": "Chaque catégorie. Chaque concurrent."
+  },
+  "caseStudy": {
+    "label": "Étude de cas",
+    "headline": "Replykaro : de 0 à 315 clics/jour en 90 jours",
+    "p1": "Replykaro est un outil d'automatisation de DM Instagram. Quand nous avons commencé, il avait 5 clics par jour. Pas de mots-clés de marque, pas de backlinks, pas de publicités payantes.",
+    "p2": "Nous avons ciblé des mots-clés de faible concurrence « alternative » et « outil gratuit » — exactement les recherches où les acheteurs passent des outils payants aux gratuits. En 90 jours, il a atteint 315 clics/jour avec 109 mots-clés classés sur Google.",
+    "live": "replykaro.com · En ligne aujourd'hui"
+  },
+  "pricing": {
+    "label": "Tarifs",
+    "headline": "Des tarifs simples basés sur les résultats",
+    "subheadline": "Pas de retainers. Pas de charabia d'agence. Payez pour des pages qui se classent — et si elles ne le font pas, nous les corrigeons gratuitement.",
+    "mostPopular": "Le plus populaire",
+    "inrNote": "Basé en Inde ? Tous les forfaits disponibles en INR.",
+    "inrCta": "Contactez-nous pour les tarifs en INR.",
+    "starter": {
+      "name": "Starter",
+      "price": "99 $",
+      "period": "/mois",
+      "desc": "Pour les SaaS en phase initiale découvrant le SEO.",
+      "cta": "Commencer",
+      "f1": "3 pages alternatives créées et publiées",
+      "f2": "Recherche de mots-clés incluse",
+      "f3": "SEO complet — titre, meta, schéma",
+      "f4": "Rapport mensuel de classement",
+      "f5": "1 révision par page"
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "299 $",
+      "period": "/mois",
+      "desc": "Pour les entreprises prêtes à dominer le trafic de comparaison.",
+      "cta": "Commencer à croître",
+      "f1": "10 pages alternatives créées et publiées",
+      "f2": "Alertes de surveillance des concurrents",
+      "f3": "Tableau de bord hebdomadaire",
+      "f4": "Mise à jour du contenu quand les classements baissent",
+      "f5": "Support Slack prioritaire",
+      "f6": "Révisions illimitées"
+    },
+    "agency": {
+      "name": "Agence",
+      "price": "799 $",
+      "period": "/mois",
+      "desc": "Pour les agences gérant le SEO de plusieurs clients SaaS.",
+      "cta": "Parlons-en",
+      "f1": "Pages illimitées pour tous les clients",
+      "f2": "Rapports en marque blanche",
+      "f3": "Accès au tableau de bord client",
+      "f4": "Responsable de compte dédié",
+      "f5": "Modèles de pages personnalisés",
+      "f6": "Accès API pour la publication"
+    }
+  },
+  "faq": {
+    "label": "FAQ",
+    "headline": "Questions fréquemment posées",
+    "q1": "Combien de temps faut-il pour que mes pages se classent ?",
+    "a1": "La plupart des pages que nous créons atteignent le top 10 en 30–60 jours. Nous ciblons spécifiquement des mots-clés avec une difficulté inférieure à 30 — moins de concurrence et des classements plus rapides. Vos données GSC montreront des impressions dans les 2 premières semaines.",
+    "q2": "Qui écrit le contenu, vous ou moi ?",
+    "a2": "Nous gérons tout — recherche de mots-clés, rédaction de la page de 2 000+ mots, métadonnées SEO, section FAQ, tableaux comparatifs et balisage schéma. Vous fournissez les fonctionnalités et les tarifs de votre produit. C'est tout.",
+    "q3": "Et si la page ne se classe pas ?",
+    "a3": "Nous surveillons et optimisons chaque page. Si une page ne progresse pas après 60 jours, nous la réécrivons, la rafraîchissons ou la reconstruisons sans frais supplémentaires. Nous ne nous arrêtons pas tant qu'elle ne se classe pas.",
+    "q4": "Cela fonctionnera-t-il pour mon secteur ?",
+    "a4": "Si votre concurrent a des acheteurs qui cherchent '[concurrent] alternative' sur Google — et presque tous les outils SaaS l'ont — cela fonctionne. Nous avons identifié des opportunités dans CRM, RH tech, outils de messagerie, SEO, support client et plus.",
+    "q5": "99 $/mois est-il vraiment suffisant pour des résultats ?",
+    "a5": "Oui pour le forfait Starter. Nous nous concentrons sur des mots-clés peu concurrentiels avec un volume réel. Une page classée apportant 50 visiteurs/mois d'acheteurs quittant votre concurrent vaut plus que 5 000 visites de trafic informatif.",
+    "q6": "Publiez-vous les pages sur mon site web ?",
+    "a6": "Oui. Nous publions directement sur votre domaine via WordPress, Webflow ou sous forme de HTML propre. Les pages vivent sur VOTRE domaine — pas le nôtre — donc toute l'autorité SEO reste avec vous."
+  },
+  "cta": {
+    "headline": "Le mot-clé alternatif de votre concurrent est classé en ce moment même.",
+    "subheadline": "Chaque jour sans la page est un autre jour où les acheteurs vont ailleurs. Réglons ça.",
+    "button": "Classer votre première page"
+  },
+  "footer": {
+    "rights": "Tous droits réservés."
+  }
+}

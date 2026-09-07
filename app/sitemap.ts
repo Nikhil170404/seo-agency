@@ -1,70 +1,40 @@
 import type { MetadataRoute } from "next";
 
 const BASE_URL = "https://gopinkaro.com";
+const LOCALES = ["en", "es", "pt", "hi", "de", "fr", "ja", "zh", "ar", "ru"];
+const DEFAULT_LOCALE = "en";
+
+function localizedUrl(path: string, locale: string): string {
+  const base = locale === DEFAULT_LOCALE ? BASE_URL : `${BASE_URL}/${locale}`;
+  return path === "/" ? base : `${base}${path}`;
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const today = new Date().toISOString();
 
-  return [
-    {
-      url: BASE_URL,
-      lastModified: today,
-      changeFrequency: "weekly",
-      priority: 1,
-    },
-    {
-      url: `${BASE_URL}/saas-seo-agency`,
-      lastModified: today,
-      changeFrequency: "monthly" as const,
-      priority: 0.95,
-    },
-    {
-      url: `${BASE_URL}/manychat-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.9,
-    },
-    {
-      url: `${BASE_URL}/wati-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly" as const,
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/zoko-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly" as const,
-      priority: 0.82,
-    },
-    {
-      url: `${BASE_URL}/interakt-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly" as const,
-      priority: 0.82,
-    },
-    {
-      url: `${BASE_URL}/intercom-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/hubspot-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/ahrefs-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-    {
-      url: `${BASE_URL}/semrush-alternative`,
-      lastModified: today,
-      changeFrequency: "monthly",
-      priority: 0.85,
-    },
-  ];
+  const homepageEntries = LOCALES.map((locale) => ({
+    url: localizedUrl("/", locale),
+    lastModified: today,
+    changeFrequency: "weekly" as const,
+    priority: locale === DEFAULT_LOCALE ? 1.0 : 0.9,
+  }));
+
+  const englishPages = [
+    { path: "/saas-seo-agency", priority: 0.95 },
+    { path: "/manychat-alternative", priority: 0.9 },
+    { path: "/wati-alternative", priority: 0.85 },
+    { path: "/zoko-alternative", priority: 0.82 },
+    { path: "/interakt-alternative", priority: 0.82 },
+    { path: "/intercom-alternative", priority: 0.85 },
+    { path: "/hubspot-alternative", priority: 0.85 },
+    { path: "/ahrefs-alternative", priority: 0.85 },
+    { path: "/semrush-alternative", priority: 0.85 },
+  ].map(({ path, priority }) => ({
+    url: `${BASE_URL}${path}`,
+    lastModified: today,
+    changeFrequency: "monthly" as const,
+    priority,
+  }));
+
+  return [...homepageEntries, ...englishPages];
 }

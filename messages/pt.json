@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "services": "Serviços",
+    "howItWorks": "Como Funciona",
+    "caseStudy": "Caso de Uso",
+    "pricing": "Preços",
+    "faq": "Perguntas Frequentes",
+    "viewPricing": "Ver Preços",
+    "getStarted": "Começar"
+  },
+  "hero": {
+    "badge": "Comprovado: 0 → 315 cliques/dia em 90 dias para o Replykaro",
+    "headline1": "Transforme buscas de",
+    "headline2": "concorrentes em",
+    "headline3": "seus clientes",
+    "subheadline": "Criamos e posicionamos páginas \"[Concorrente] Alternativa\" para empresas SaaS. Compradores migrando de seus concorrentes chegam à sua página — não à deles.",
+    "ctaPrimary": "Comece a ranquear agora",
+    "ctaSecondary": "Ver a prova"
+  },
+  "stats": {
+    "clicks": "Crescimento de cliques/dia para o Replykaro",
+    "days": "Tempo para chegar à primeira página",
+    "kd": "Dificuldade média de keyword que miramos",
+    "impressions": "Impressões mensais desbloqueadas"
+  },
+  "problem": {
+    "label": "O problema",
+    "headline": "2.874 pessoas pesquisaram \"alternativa ao Zoko\" no mês passado.",
+    "p1": "Todas estavam prontas para trocar de ferramenta. Com os cartões de crédito na mão. E seu produto não estava na página que encontraram.",
+    "p2": "Buscas por \"alternativa\" e \"vs\" são o tráfego de maior conversão da internet — taxa de 7,5% vs 1-2% de tudo mais. São compradores, não curiosos."
+  },
+  "howItWorks": {
+    "label": "Como funciona",
+    "headline": "Três etapas. Um resultado: ranqueamento.",
+    "step1title": "Criamos a página",
+    "step1desc": "Pesquisamos a keyword, escrevemos uma página de comparação com mais de 2.000 palavras para compradores buscando alternativas ao seu concorrente. SEO completo — título, meta, schema, FAQ, links internos.",
+    "step2title": "Ela ranqueia no Google",
+    "step2desc": "Enviamos, monitoramos e otimizamos até sua página chegar ao top 10. A maioria ranqueia em 30-60 dias. Miramos keywords com dificuldade abaixo de 30 para resultados previsíveis.",
+    "step3title": "Você recebe tráfego orgânico",
+    "step3desc": "Compradores migrando do seu concorrente chegam à sua página. Sem prospecção fria. Sem anúncios. Tráfego orgânico puro de pessoas prontas para comprar — com conversão de 7,5% vs 1-2% de conteúdo normal."
+  },
+  "industries": {
+    "label": "O que ranqueamos",
+    "headline": "Todas as categorias. Todos os concorrentes."
+  },
+  "caseStudy": {
+    "label": "Caso de uso",
+    "headline": "Replykaro: de 0 a 315 cliques/dia em 90 dias",
+    "p1": "Replykaro é uma ferramenta de automação de DM no Instagram. Quando começamos, tinha 5 cliques por dia. Sem keywords de marca, sem backlinks, sem anúncios pagos.",
+    "p2": "Miramos keywords de baixa concorrência de \"alternativa\" e \"ferramenta gratuita\" — exatamente as buscas onde compradores migram de ferramentas pagas para gratuitas. Em 90 dias, chegou a 315 cliques/dia com 109 keywords ranqueando no Google.",
+    "live": "replykaro.com · No ar hoje"
+  },
+  "pricing": {
+    "label": "Preços",
+    "headline": "Preços simples baseados em resultados",
+    "subheadline": "Sem retainers. Sem enrolação de agência. Pague por páginas que ranqueiam — e se não ranquearem, consertamos de graça.",
+    "mostPopular": "Mais Popular",
+    "inrNote": "Está na Índia? Todos os planos disponíveis em INR.",
+    "inrCta": "Entre em contato para preços em INR.",
+    "starter": {
+      "name": "Starter",
+      "price": "$99",
+      "period": "/mês",
+      "desc": "Para SaaS em estágio inicial entrando em SEO pela primeira vez.",
+      "cta": "Começar",
+      "f1": "3 páginas alternativas criadas e publicadas",
+      "f2": "Pesquisa de keywords incluída",
+      "f3": "SEO completo — título, meta, schema",
+      "f4": "Relatório mensal de ranqueamento",
+      "f5": "1 revisão por página"
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$299",
+      "period": "/mês",
+      "desc": "Para empresas prontas para dominar o tráfego de comparação.",
+      "cta": "Começar a crescer",
+      "f1": "10 páginas alternativas criadas e publicadas",
+      "f2": "Alertas de monitoramento de concorrentes",
+      "f3": "Painel semanal de rastreamento",
+      "f4": "Atualização de conteúdo quando rankings caem",
+      "f5": "Suporte prioritário no Slack",
+      "f6": "Revisões ilimitadas"
+    },
+    "agency": {
+      "name": "Agência",
+      "price": "$799",
+      "period": "/mês",
+      "desc": "Para agências gerenciando SEO para múltiplos clientes SaaS.",
+      "cta": "Fale conosco",
+      "f1": "Páginas ilimitadas para todos os clientes",
+      "f2": "Relatórios white-label",
+      "f3": "Acesso ao painel de clientes",
+      "f4": "Gerente de conta dedicado",
+      "f5": "Templates de página personalizados",
+      "f6": "Acesso via API para publicação"
+    }
+  },
+  "faq": {
+    "label": "Perguntas frequentes",
+    "headline": "Perguntas que recebemos",
+    "q1": "Com que rapidez minhas páginas vão ranquear?",
+    "a1": "A maioria das páginas que criamos chega ao top 10 em 30-60 dias. Miramos especificamente keywords com dificuldade abaixo de 30 — menos concorrência e ranqueamento mais rápido. Seu GSC mostrará impressões nas primeiras 2 semanas.",
+    "q2": "Vocês escrevem o conteúdo ou sou eu?",
+    "a2": "Cuidamos de tudo — pesquisa de keywords, escrita da página com mais de 2.000 palavras, metadados SEO, seção de FAQ, tabelas de comparação e marcação de schema. Você fornece as funcionalidades e preços do seu produto. Só isso.",
+    "q3": "E se a página não ranquear?",
+    "a3": "Monitoramos e otimizamos cada página. Se uma página não subir após 60 dias, reescrevemos, atualizamos ou reconstruímos sem custo adicional. Não paramos até ranquear.",
+    "q4": "Isso vai funcionar para meu setor?",
+    "a4": "Se seu concorrente tem compradores pesquisando '[concorrente] alternativa' no Google — e quase toda ferramenta SaaS tem — isso funciona. Identificamos oportunidades em CRM, HR tech, ferramentas de mensagem, SEO, suporte ao cliente e mais.",
+    "q5": "$99/mês é suficiente para ter resultados?",
+    "a5": "Sim para o plano Starter. Focamos em keywords de baixa concorrência com volume real. Uma página ranqueada trazendo 50 visitantes/mês de compradores migrando do seu concorrente vale mais do que 5.000 visitas de tráfego informacional.",
+    "q6": "Vocês publicam as páginas no meu site?",
+    "a6": "Sim. Publicamos diretamente no seu domínio via WordPress, Webflow ou como HTML limpo. As páginas ficam no SEU domínio — não no nosso — então toda a autoridade SEO fica com você."
+  },
+  "cta": {
+    "headline": "A keyword alternativa do seu concorrente está ranqueando agora mesmo.",
+    "subheadline": "Cada dia sem a página é mais um dia de compradores indo para outra empresa. Vamos resolver isso.",
+    "button": "Ranqueie sua primeira página"
+  },
+  "footer": {
+    "rights": "Todos os direitos reservados."
+  }
+}

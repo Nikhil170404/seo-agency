@@ -1,0 +1,123 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "howItWorks": "Cómo Funciona",
+    "caseStudy": "Caso de Estudio",
+    "pricing": "Precios",
+    "faq": "Preguntas Frecuentes",
+    "viewPricing": "Ver Precios",
+    "getStarted": "Comenzar"
+  },
+  "hero": {
+    "badge": "Comprobado: 0 → 315 clics/día en 90 días para Replykaro",
+    "headline1": "Convierte búsquedas",
+    "headline2": "de competidores en",
+    "headline3": "tus clientes",
+    "subheadline": "Creamos y posicionamos páginas \"[Competidor] Alternativa\" para empresas SaaS. Los compradores que cambian de tu competidor aterrizan en tu página, no en la de ellos.",
+    "ctaPrimary": "Comenzar a posicionar",
+    "ctaSecondary": "Ver la prueba"
+  },
+  "stats": {
+    "clicks": "Crecimiento de clics/día para Replykaro",
+    "days": "Tiempo hasta llegar a la primera página",
+    "kd": "Dificultad promedio de keywords que apuntamos",
+    "impressions": "Impresiones mensuales desbloqueadas"
+  },
+  "problem": {
+    "label": "El problema",
+    "headline": "2.874 personas buscaron \"alternativa a Zoko\" el mes pasado.",
+    "p1": "Todas estaban listas para cambiar de herramienta. Tenían sus tarjetas de crédito a mano. Y tu producto no estaba en la página que encontraron.",
+    "p2": "Las búsquedas de \"alternativa\" y \"vs\" son el tráfico que más convierte en internet — tasa de conversión del 7,5% frente al 1-2% del resto. Son compradores, no curiosos."
+  },
+  "howItWorks": {
+    "label": "Cómo funciona",
+    "headline": "Tres pasos. Un resultado: posicionamiento.",
+    "step1title": "Creamos la página",
+    "step1desc": "Investigamos la keyword, redactamos una página de comparación de más de 2.000 palabras para compradores que buscan la alternativa a tu competidor. SEO completo — título, meta, schema, FAQ, enlaces internos.",
+    "step2title": "Aparece en Google",
+    "step2desc": "Enviamos, rastreamos y optimizamos hasta que tu página llegue al top 10. La mayoría de páginas posicionan en 30-60 días. Apuntamos a keywords con dificultad menor de 30 para resultados predecibles.",
+    "step3title": "Recibes tráfico entrante",
+    "step3desc": "Los compradores que cambian de tu competidor llegan a tu página. Sin prospección en frío. Sin anuncios. Tráfico orgánico puro de personas en modo compra — con conversión del 7,5% frente al 1-2% del contenido normal."
+  },
+  "industries": {
+    "label": "Qué posicionamos",
+    "headline": "Cada categoría. Cada competidor."
+  },
+  "caseStudy": {
+    "label": "Caso de estudio",
+    "headline": "Replykaro: de 0 a 315 clics/día en 90 días",
+    "p1": "Replykaro es una herramienta de automatización de DMs de Instagram. Cuando empezamos, tenía 5 clics por día. Sin keywords de marca, sin backlinks, sin anuncios pagados.",
+    "p2": "Apuntamos a keywords de baja competencia de \"alternativa\" y \"herramienta gratuita\" — exactamente las búsquedas donde los compradores cambian de herramientas de pago a gratuitas. En 90 días, llegó a 315 clics/día con 109 keywords posicionadas en Google.",
+    "live": "replykaro.com · En vivo hoy"
+  },
+  "pricing": {
+    "label": "Precios",
+    "headline": "Precios simples basados en resultados",
+    "subheadline": "Sin contratos de retención. Sin relleno de agencia. Paga por páginas que posicionan — y si no, las arreglamos gratis.",
+    "mostPopular": "Más Popular",
+    "inrNote": "¿Estás en India? Todos los planes disponibles en INR.",
+    "inrCta": "Contáctanos para precios en INR.",
+    "starter": {
+      "name": "Starter",
+      "price": "$99",
+      "period": "/mes",
+      "desc": "Para SaaS en etapa temprana que se inicia en SEO.",
+      "cta": "Comenzar",
+      "f1": "3 páginas alternativas creadas y publicadas",
+      "f2": "Investigación de keywords incluida",
+      "f3": "SEO completo — título, meta, schema",
+      "f4": "Informe mensual de posicionamiento",
+      "f5": "1 revisión por página"
+    },
+    "growth": {
+      "name": "Growth",
+      "price": "$299",
+      "period": "/mes",
+      "desc": "Para empresas listas para dominar el tráfico de comparación.",
+      "cta": "Empezar a crecer",
+      "f1": "10 páginas alternativas creadas y publicadas",
+      "f2": "Alertas de monitoreo de competidores",
+      "f3": "Panel de seguimiento semanal",
+      "f4": "Actualización de contenido cuando bajan los rankings",
+      "f5": "Soporte prioritario en Slack",
+      "f6": "Revisiones ilimitadas"
+    },
+    "agency": {
+      "name": "Agencia",
+      "price": "$799",
+      "period": "/mes",
+      "desc": "Para agencias que gestionan SEO para múltiples clientes SaaS.",
+      "cta": "Habla con nosotros",
+      "f1": "Páginas ilimitadas para todos los clientes",
+      "f2": "Informes white-label",
+      "f3": "Acceso al panel de clientes",
+      "f4": "Gestor de cuenta dedicado",
+      "f5": "Plantillas de página personalizadas",
+      "f6": "Acceso API para publicación"
+    }
+  },
+  "faq": {
+    "label": "Preguntas frecuentes",
+    "headline": "Preguntas que nos hacen",
+    "q1": "¿Con qué rapidez posicionarán mis páginas?",
+    "a1": "La mayoría de las páginas que creamos llegan al top 10 en 30-60 días. Apuntamos específicamente a keywords con dificultad menor de 30 — menos competencia y posicionamiento más rápido. Tu GSC mostrará impresiones en las primeras 2 semanas.",
+    "q2": "¿Quién escribe el contenido, vosotros o yo?",
+    "a2": "Nos encargamos de todo — investigación de keywords, redacción de la página de más de 2.000 palabras, metadatos SEO, sección de FAQ, tablas comparativas y marcado de schema. Tú nos proporcionas las características y precios de tu producto. Eso es todo.",
+    "q3": "¿Qué pasa si la página no posiciona?",
+    "a3": "Monitorizamos y optimizamos cada página. Si una página no sube después de 60 días, la reescribimos, actualizamos o reconstruimos sin coste adicional. No paramos hasta que posicione.",
+    "q4": "¿Funcionará para mi sector?",
+    "a4": "Si tu competidor tiene compradores buscando '[competidor] alternativa' en Google — y casi todas las herramientas SaaS lo tienen — esto funciona. Hemos identificado oportunidades en CRM, HR tech, herramientas de mensajería, SEO, soporte al cliente y más.",
+    "q5": "¿Son suficientes $99/mes para obtener resultados?",
+    "a5": "Sí para el plan Starter. Nos enfocamos en keywords de baja competencia con volumen real. Una página posicionada que traiga 50 visitantes/mes de compradores cambiando de tu competidor vale más que 5.000 visitas de tráfico informacional.",
+    "q6": "¿Publicáis las páginas en mi sitio web?",
+    "a6": "Sí. Publicamos directamente en tu dominio vía WordPress, Webflow o como HTML limpio. Las páginas viven en TU dominio — no en el nuestro — así toda la autoridad SEO se queda contigo."
+  },
+  "cta": {
+    "headline": "La keyword alternativa de tu competidor está posicionando ahora mismo.",
+    "subheadline": "Cada día sin la página es un día más de compradores yendo a otro. Vamos a solucionar eso.",
+    "button": "Posiciona tu primera página"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}
