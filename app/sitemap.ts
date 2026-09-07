@@ -13,6 +13,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
+      url: `${BASE_URL}/saas-seo-agency`,
+      lastModified: today,
+      changeFrequency: "monthly" as const,
+      priority: 0.95,
+    },
+    {
       url: `${BASE_URL}/manychat-alternative`,
       lastModified: today,
       changeFrequency: "monthly",

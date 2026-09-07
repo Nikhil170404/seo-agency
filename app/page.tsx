@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 
 const NAV_LINKS = [
+  { label: "Services", href: "/saas-seo-agency" },
   { label: "How It Works", href: "#how-it-works" },
   { label: "Case Study", href: "#case-study" },
   { label: "Pricing", href: "#pricing" },
