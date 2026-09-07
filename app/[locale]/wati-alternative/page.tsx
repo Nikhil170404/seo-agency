@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Check, X, Star, ArrowRight, ChevronRight, Zap } from "lucide-react";
+import {
+  AlternativeNav,
+  AlternativeFooter,
+  Breadcrumb,
+  ArticleHeader,
+  QuickPicks,
+  ToolCard,
+  FaqSection,
+  RelatedLinks,
+  GetListedCta,
+} from "@/components/AlternativePageShell";
 
 export const metadata: Metadata = {
   title: "6 Best Wati Alternatives in 2026 (WhatsApp Business API Tools) — GoPinKaro",
@@ -22,9 +31,7 @@ export const metadata: Metadata = {
       "Wati Growth starts at $59/mo plus Meta message fees. These WhatsApp alternatives give you more for less.",
     type: "article",
   },
-  alternates: {
-    canonical: "https://gopinkaro.com/wati-alternative",
-  },
+  alternates: { canonical: "https://gopinkaro.com/wati-alternative" },
 };
 
 const TOOLS = [
@@ -32,67 +39,73 @@ const TOOLS = [
     rank: 1,
     name: "Interakt",
     tagline: "Best Budget Wati Alternative for India",
-    badge: "Best Value India",
-    badgeColor: "bg-emerald-100 text-emerald-700",
+    verdict: "Editor's pick — ₹999/mo vs Wati's $59/mo (~₹4,900). Native Shopify plugin, cart recovery, and a team inbox that covers 90% of what Indian D2C brands use Wati for.",
     price: "₹999/mo (~$12) · 14-day free trial",
-    bestFor: "Indian D2C brands on Shopify wanting WhatsApp Business API for order notifications, cart recovery, and customer support — at 80% less than Wati's USD pricing",
+    bestFor: "Indian D2C brands on Shopify wanting WhatsApp Business API for order notifications, cart recovery, and customer support — at 80% less than Wati's USD pricing.",
     channels: ["WhatsApp Business API"],
     pros: [
       "₹999/mo Starter vs Wati Growth's $59/mo (~₹4,900)",
-      "Quarterly billing available — ₹3,499 for 3 months",
-      "Native Shopify and WooCommerce integration",
+      "Native Shopify and WooCommerce plugin",
+      "Automated order confirmation and shipping updates via WhatsApp",
       "Team shared inbox for customer support",
       "14-day free trial, no credit card needed",
     ],
-    cons: ["WhatsApp-only — no Instagram or Messenger", "12–15% markup on Meta's conversation fees", "Fewer automation flows than Wati on the base plan"],
-    rating: 4.5,
+    cons: [
+      "WhatsApp only — no Instagram or Messenger",
+      "12–15% markup on Meta's conversation fees",
+      "Fewer automation flows than Wati on the base plan",
+    ],
+    ctaHref: "https://interakt.ai",
+    ctaLabel: "Try Interakt free",
   },
   {
     rank: 2,
     name: "AiSensy",
     tagline: "Best WhatsApp Broadcast Alternative to Wati",
-    badge: "Best Broadcasts",
-    badgeColor: "bg-blue-100 text-blue-700",
+    verdict: "Better than Wati for broadcast-heavy use cases — cheaper pricing and transparent Meta fee pass-through make bulk campaign costs more predictable month to month.",
     price: "Free · ₹1,500/mo Basic · ₹3,200/mo Pro",
-    bestFor: "Brands running large WhatsApp broadcast campaigns and retargeting existing customer lists with automation chatbots",
+    bestFor: "Brands running large WhatsApp broadcast campaigns and retargeting existing customer lists with automation chatbots.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Free plan with unlimited chats (limited features)",
       "₹1,500/mo Basic — significantly cheaper than Wati",
       "Bulk broadcast to opted-in contacts at scale",
       "ChatGPT-powered chatbot on paid plans",
-      "WhatsApp now charges per-template-message — AiSensy passes through Meta rates transparently",
+      "Meta rates passed through transparently — no hidden markup",
     ],
-    cons: ["WhatsApp-only", "Advanced analytics require higher plans", "Less polished automation builder than Wati"],
-    rating: 4.3,
+    cons: [
+      "WhatsApp-only",
+      "Advanced analytics require higher plans",
+      "Less polished automation builder than Wati",
+    ],
   },
   {
     rank: 3,
     name: "Zoko",
     tagline: "Best WhatsApp Alternative for Shopify D2C",
-    badge: "Best for Shopify",
-    badgeColor: "bg-purple-100 text-purple-700",
+    verdict: "Purpose-built for Shopify e-commerce in a way Wati isn't — native cart recovery, WhatsApp checkout flows, and COD confirmation automation are Zoko's edge for D2C.",
     price: "$49.99/mo Starter · $59.99/mo Plus",
-    bestFor: "Shopify stores wanting WhatsApp checkout, cart abandonment recovery, COD confirmations, and campaign flows built for e-commerce",
+    bestFor: "Shopify stores wanting WhatsApp checkout, cart abandonment recovery, COD confirmations, and campaign flows built for e-commerce.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Purpose-built for Shopify — native cart recovery and checkout flows",
-      "Plus plan ($59.99/mo) removes per-conversation markup from Starter",
+      "Plus plan ($59.99/mo) removes per-conversation markup",
       "COD confirmation and delivery notification automation",
       "Multi-agent team inbox included",
       "Click-to-WhatsApp campaign integration",
     ],
-    cons: ["Similar price to Wati at higher tiers", "Instagram is a paid add-on, not included", "Meta shifted to per-message pricing Jan 2026 — costs vary by volume"],
-    rating: 4.2,
+    cons: [
+      "Similar price to Wati at higher tiers",
+      "Instagram is a paid add-on, not included",
+    ],
   },
   {
     rank: 4,
     name: "Gallabox",
     tagline: "Best for WhatsApp + CRM Pipeline",
-    badge: "Best CRM Connect",
-    badgeColor: "bg-orange-100 text-orange-700",
+    verdict: "If Wati's team inbox isn't enough and you want a CRM pipeline view inside your WhatsApp inbox, Gallabox adds lead scoring and deal tracking at ₹1,499/mo.",
     price: "₹1,499/mo (~$18)",
-    bestFor: "Sales teams who want a WhatsApp inbox connected to a visual CRM pipeline — lead assignment, deal tracking, and auto-routing in one tool",
+    bestFor: "Sales teams who want a WhatsApp inbox connected to a visual CRM pipeline — lead assignment, deal tracking, and auto-routing in one tool.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Built-in CRM pipeline view for WhatsApp sales conversations",
@@ -101,17 +114,19 @@ const TOOLS = [
       "Integrates with Zoho CRM, HubSpot, Salesforce",
       "India-based support team",
     ],
-    cons: ["WhatsApp-only", "CRM is basic compared to standalone CRM tools", "Automation builder is simpler than Wati's"],
-    rating: 4.1,
+    cons: [
+      "WhatsApp-only",
+      "CRM is basic compared to standalone CRM tools",
+      "Automation builder is simpler than Wati's",
+    ],
   },
   {
     rank: 5,
     name: "Respond.io",
     tagline: "Best Omnichannel Alternative if You Need More Than WhatsApp",
-    badge: "Best Omnichannel",
-    badgeColor: "bg-indigo-100 text-indigo-700",
+    verdict: "The only tool here that genuinely solves omnichannel — if Wati's WhatsApp-only scope is the problem, Respond.io handles every channel in one inbox starting at $79/mo.",
     price: "$79/mo Starter",
-    bestFor: "Teams managing WhatsApp, Instagram, Facebook, Telegram, and email in one inbox — customer support at scale across every channel",
+    bestFor: "Teams managing WhatsApp, Instagram, Facebook, Telegram, and email in one inbox — customer support at scale across every channel.",
     channels: ["WhatsApp", "Instagram", "Facebook", "Telegram", "Email", "Live Chat"],
     pros: [
       "True omnichannel inbox — all messaging channels unified",
@@ -120,17 +135,19 @@ const TOOLS = [
       "CRM integrations with Salesforce and HubSpot",
       "Detailed agent performance reporting",
     ],
-    cons: ["$79/mo minimum is more expensive than Wati's entry plan", "More complex to set up — not ideal for small teams", "USD billing adds GST overhead for Indian teams"],
-    rating: 4.4,
+    cons: [
+      "$79/mo minimum is more expensive than Wati's entry plan",
+      "More complex to set up — not ideal for small teams",
+      "USD billing adds GST overhead for Indian teams",
+    ],
   },
   {
     rank: 6,
-    name: "Wati (for context)",
+    name: "Wati",
     tagline: "What Wati Actually Costs in 2026",
-    badge: "For Reference",
-    badgeColor: "bg-gray-100 text-gray-700",
+    verdict: "A mature, reliable BSP — but $59/mo Growth plus a 20% markup on Meta fees adds up. The 5-user cap forces an upgrade to $119/mo Pro faster than most teams expect.",
     price: "$59/mo Growth · $119/mo Pro · $279/mo Business",
-    bestFor: "Teams that need Wati's specific integrations or whose IT/compliance requirements mandate a specific BSP — and have the budget for it",
+    bestFor: "Teams that need Wati's specific integrations or whose IT/compliance requirements mandate a specific BSP — and have the budget for it.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Reliable WhatsApp Business API BSP with good uptime",
@@ -143,9 +160,8 @@ const TOOLS = [
       "Growth plan $59/mo — plus 20% markup on Meta per-message fees",
       "5-user limit on Growth; more seats cost extra",
       "USD billing — Indian teams pay GST on international invoices",
-      "Business plan ($279/mo) needed for full API access and higher limits",
+      "Business plan ($279/mo) needed for full API access",
     ],
-    rating: 4.0,
   },
 ];
 
@@ -171,20 +187,6 @@ const FAQS = [
     a: "No — Wati is WhatsApp-only. If you need Instagram DM automation alongside WhatsApp, Respond.io covers both channels from $79/month. For Instagram-only DM automation, ReplyKaro is purpose-built for it at ₹99/month with a free plan — but it does not support WhatsApp.",
   },
 ];
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-1">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <Star
-          key={star}
-          className={`w-4 h-4 ${star <= Math.round(rating) ? "fill-amber-400 text-amber-400" : "text-gray-200"}`}
-        />
-      ))}
-      <span className="text-sm font-medium ml-1">{rating}</span>
-    </div>
-  );
-}
 
 export default function WatiAlternativePage() {
   return (
@@ -224,186 +226,92 @@ export default function WatiAlternativePage() {
         }}
       />
 
-      <div style={{ background: "var(--background)", color: "var(--foreground)" }}>
-        <nav style={{ borderBottom: "1px solid var(--border)" }} className="sticky top-0 z-50 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-semibold text-base">
-              <Zap className="w-5 h-5 text-emerald-600" />
-              <span className="font-display">GoPinKaro</span>
-            </Link>
-            <div className="flex items-center gap-4">
-              <Link href="/#pricing" className="text-sm" style={{ color: "var(--text-secondary)" }}>Pricing</Link>
-              <Link href="mailto:hello@gopinkaro.com" className="text-sm font-medium px-4 py-1.5 rounded-lg text-white" style={{ background: "var(--accent)" }}>
-                Get Listed
-              </Link>
-            </div>
+      <AlternativeNav />
+
+      <main className="max-w-5xl mx-auto px-5 sm:px-8 py-10">
+        <Breadcrumb label="Wati Alternative" />
+
+        <ArticleHeader
+          date="Updated September 2026"
+          count="6 tools"
+          title="6 Best Wati Alternatives in 2026"
+          accentTitle="WhatsApp Business API, Priced Honestly"
+          intro="Wati Growth costs $59/month — that is before the ~20% markup on Meta's per-message fees. For Indian businesses especially, the effective monthly cost is significant. These alternatives offer WhatsApp Business API at a much lower starting price, most with INR billing."
+        />
+
+        <QuickPicks
+          picks={[
+            { label: "Cheapest with Shopify", value: "Interakt — ₹999/mo, 14-day trial, native Shopify plugin" },
+            { label: "Best free plan", value: "AiSensy — free tier, ₹1,500/mo Basic with chatbot" },
+            { label: "Best for Shopify D2C", value: "Zoko — $49.99/mo, WhatsApp checkout + cart recovery" },
+            { label: "Need Instagram too", value: "Respond.io — $79/mo, WhatsApp + Instagram + more" },
+          ]}
+        />
+
+        <section className="mb-14">
+          <h2 className="font-display font-bold text-[1.6rem] mb-6">Why Teams Switch from Wati</h2>
+          <div className="grid sm:grid-cols-3 gap-px bg-[#E1E5EE] rounded-2xl overflow-hidden mb-8">
+            {[
+              {
+                title: "Real cost is higher than listed",
+                desc: "Wati's $59/mo Growth is the starting point. Add the ~20% markup on Meta per-message fees and the monthly bill grows significantly depending on conversation volume.",
+              },
+              {
+                title: "5-user cap on Growth",
+                desc: "The Growth plan allows only 5 users. Once your support team grows beyond that, you move to Pro at $119/mo — nearly double — before you've changed anything else.",
+              },
+              {
+                title: "USD billing for Indian teams",
+                desc: "Indian businesses pay 18% GST on USD SaaS invoices plus forex conversion fees. Interakt and AiSensy offer INR billing via UPI, which eliminates both costs.",
+              },
+            ].map((item) => (
+              <div key={item.title} className="p-5 bg-white">
+                <p className="font-semibold text-[14px] text-[#0A0F1E] mb-2">{item.title}</p>
+                <p className="text-[13px] text-[#5A6478] leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
           </div>
-        </nav>
+        </section>
 
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-          <nav className="flex items-center gap-1.5 text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
-            <Link href="/" className="hover:underline">GoPinKaro</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span style={{ color: "var(--foreground)" }}>Wati Alternative</span>
-          </nav>
-
-          <header className="mb-10">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs font-mono px-2.5 py-1 rounded-full" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>
-                Updated September 2026
-              </span>
-              <span className="text-xs" style={{ color: "var(--text-secondary)" }}>6 tools reviewed</span>
-            </div>
-            <h1 className="font-display text-3xl sm:text-4xl font-bold leading-tight mb-4">
-              6 Best Wati Alternatives in 2026
-              <br />
-              <span style={{ color: "var(--accent)" }}>WhatsApp Business API, Priced Honestly</span>
-            </h1>
-            <p className="text-lg mb-6" style={{ color: "var(--text-secondary)", maxWidth: "700px" }}>
-              Wati Growth costs $59/month — that is before the ~20% markup on Meta's per-message fees.
-              For Indian businesses especially, the effective monthly cost can be significant. These
-              alternatives offer WhatsApp Business API at a much lower starting price.
-            </p>
-
-            <div className="p-4 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
-              <p className="text-sm font-semibold mb-2">Quick picks:</p>
-              <ul className="space-y-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Cheapest with Shopify:</span> Interakt — ₹999/mo, 14-day trial</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best free plan:</span> AiSensy — free tier, ₹1,500/mo Basic</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best for Shopify D2C:</span> Zoko — $49.99/mo, WhatsApp checkout flows</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Need Instagram too:</span> Respond.io — $79/mo, WhatsApp + Instagram + more</li>
-              </ul>
-            </div>
-          </header>
-
-          <section className="mb-12">
-            <h2 className="font-display text-2xl font-bold mb-4">Why Teams Switch from Wati</h2>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {[
-                { title: "Real cost is higher than listed", desc: "Wati's $59/mo Growth plan is the starting point, not the ending point. Add the 20% markup on Meta per-message fees and you're looking at a much higher monthly bill depending on volume." },
-                { title: "5-user cap on Growth", desc: "The Growth plan allows only 5 users. Once your support team grows beyond that, you're forced to the Pro plan at $119/mo — nearly double." },
-                { title: "USD billing for Indian teams", desc: "Indian businesses pay 18% GST on USD SaaS invoices plus forex conversion fees on every payment. Interakt and AiSensy offer INR billing via UPI, which eliminates both." },
-              ].map((item) => (
-                <div key={item.title} className="p-4 rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-                  <p className="font-semibold text-sm mb-1">{item.title}</p>
-                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="font-display text-2xl font-bold mb-6">The 6 Best Wati Alternatives</h2>
-            <div className="space-y-6">
-              {TOOLS.map((tool) => (
-                <div key={tool.name} className="rounded-2xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
-                  <div className="p-6">
-                    <div className="flex items-start justify-between flex-wrap gap-3 mb-3">
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs px-2 py-0.5 rounded" style={{ background: "var(--surface-2)", color: "var(--text-secondary)" }}>#{tool.rank}</span>
-                        <h3 className="font-display text-xl font-bold">{tool.name}</h3>
-                        <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${tool.badgeColor}`}>{tool.badge}</span>
-                      </div>
-                      <StarRating rating={tool.rating} />
-                    </div>
-                    <p className="font-semibold mb-1">{tool.tagline}</p>
-                    <p className="text-sm mb-4" style={{ color: "var(--text-secondary)" }}><strong>Best for:</strong> {tool.bestFor}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tool.channels.map((ch) => (
-                        <span key={ch} className="text-xs px-2.5 py-1 rounded-full border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>{ch}</span>
-                      ))}
-                      <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>{tool.price}</span>
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-secondary)" }}>Pros</p>
-                        <ul className="space-y-1.5">
-                          {tool.pros.map((pro) => (
-                            <li key={pro} className="flex items-start gap-2 text-sm">
-                              <Check className="w-4 h-4 mt-0.5 shrink-0 text-emerald-500" />{pro}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-secondary)" }}>Cons</p>
-                        <ul className="space-y-1.5">
-                          {tool.cons.map((con) => (
-                            <li key={con} className="flex items-start gap-2 text-sm">
-                              <X className="w-4 h-4 mt-0.5 shrink-0 text-red-400" />{con}
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                  {tool.rank === 1 && (
-                    <div className="px-6 py-3 flex items-center justify-between" style={{ background: "var(--accent-dim)", borderTop: "1px solid var(--border)" }}>
-                      <p className="text-sm font-medium" style={{ color: "var(--accent)" }}>⭐ Top pick — ₹999/mo, INR billing via UPI, 14-day free trial</p>
-                      <a href="https://interakt.shop" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-semibold" style={{ color: "var(--accent)" }}>
-                        Try free <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <div className="mb-12 p-5 rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-            <p className="text-sm font-semibold mb-1">Also looking for Instagram DM automation?</p>
-            <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
-              Wati and all the tools above are WhatsApp-only. If you need Instagram comment-to-DM automation, story reply flows, or Follow Gate automation,{" "}
-              <a href="https://replykaro.com" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline" style={{ color: "var(--accent)" }}>ReplyKaro</a>{" "}
-              is purpose-built for it — free for 1,000 DMs/mo, ₹99/mo for 30,000. It does not support WhatsApp.
-            </p>
+        <section className="mb-14">
+          <h2 className="font-display font-bold text-[1.6rem] mb-8">The 6 Best Wati Alternatives</h2>
+          <div className="space-y-5">
+            {TOOLS.map((tool) => (
+              <ToolCard key={tool.name} {...tool} />
+            ))}
           </div>
+        </section>
 
-          <section className="mb-12">
-            <h2 className="font-display text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-            <div className="space-y-4">
-              {FAQS.map((faq) => (
-                <div key={faq.q} className="p-5 rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-                  <h3 className="font-semibold mb-2">{faq.q}</h3>
-                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
+        <div className="mb-14 rounded-2xl border border-[#E1E5EE] px-6 py-5">
+          <p className="font-semibold text-[14px] text-[#0A0F1E] mb-1.5">Also need Instagram DM automation?</p>
+          <p className="text-[13px] text-[#5A6478] leading-relaxed">
+            Wati and all the tools above are WhatsApp-only. For Instagram comment-to-DM automation, story reply
+            flows, or Follow Gate,{" "}
+            <a href="https://replykaro.com" target="_blank" rel="noopener noreferrer" className="text-[#047857] font-medium hover:underline underline-offset-2">
+              ReplyKaro
+            </a>{" "}
+            is purpose-built — free for 1,000 DMs/mo, ₹99/mo for 30,000. It does not support WhatsApp.
+          </p>
+        </div>
 
-          <section className="mb-12">
-            <h2 className="font-display text-xl font-bold mb-4">More WhatsApp Tool Comparisons</h2>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { label: "ManyChat Alternative", href: "/manychat-alternative" },
-                { label: "Zoko Alternative", href: "/zoko-alternative" },
-                { label: "Interakt Alternative", href: "/interakt-alternative" },
-                { label: "Intercom Alternative", href: "/intercom-alternative" },
-              ].map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm px-4 py-2 rounded-lg border flex items-center gap-1 hover:border-emerald-300 transition-colors" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>
-                  {link.label} <ArrowRight className="w-3 h-3" />
-                </Link>
-              ))}
-            </div>
-          </section>
+        <FaqSection faqs={FAQS} />
 
-          <section className="rounded-2xl p-8 text-center" style={{ background: "var(--surface-2)", border: "1px solid var(--border)" }}>
-            <p className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>For tool makers</p>
-            <h2 className="font-display text-2xl font-bold mb-3">Is Your Tool a Wati Alternative?</h2>
-            <p className="text-sm mb-6 mx-auto max-w-md" style={{ color: "var(--text-secondary)" }}>
-              This page gets consistent traffic from teams actively evaluating WhatsApp Business API platforms. Get your tool in front of that audience.
-            </p>
-            <a href="mailto:hello@gopinkaro.com?subject=Get Listed — Wati Alternative Page" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium" style={{ background: "var(--accent)" }}>
-              Get Listed <ArrowRight className="w-4 h-4" />
-            </a>
-            <p className="text-xs mt-3" style={{ color: "var(--text-secondary)" }}>Starts at ₹4,999/month · We rank the page, you capture the traffic</p>
-          </section>
-        </main>
+        <RelatedLinks
+          links={[
+            { label: "ManyChat Alternative", href: "/manychat-alternative" },
+            { label: "Zoko Alternative", href: "/zoko-alternative" },
+            { label: "Interakt Alternative", href: "/interakt-alternative" },
+            { label: "Intercom Alternative", href: "/intercom-alternative" },
+          ]}
+        />
 
-        <footer className="mt-16 py-8 text-center text-sm" style={{ borderTop: "1px solid var(--border)", color: "var(--text-secondary)" }}>
-          <p>Built by <Link href="/" className="hover:underline font-medium">GoPinKaro</Link> · We rank alternative pages and let traffic prove the value · <a href="mailto:hello@gopinkaro.com" className="hover:underline">hello@gopinkaro.com</a></p>
-        </footer>
-      </div>
+        <GetListedCta
+          subject="Get Listed — Wati Alternative Page"
+          pageTraffic="Consistent traffic from teams actively evaluating WhatsApp Business API platforms"
+        />
+      </main>
+
+      <AlternativeFooter />
     </>
   );
 }

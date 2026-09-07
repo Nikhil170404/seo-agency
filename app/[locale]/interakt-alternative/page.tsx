@@ -1,6 +1,15 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { Check, X, Star, ArrowRight, ChevronRight, Zap } from "lucide-react";
+import {
+  AlternativeNav,
+  AlternativeFooter,
+  Breadcrumb,
+  ArticleHeader,
+  QuickPicks,
+  ToolCard,
+  FaqSection,
+  RelatedLinks,
+  GetListedCta,
+} from "@/components/AlternativePageShell";
 
 export const metadata: Metadata = {
   title: "5 Best Interakt Alternatives in 2026 (WhatsApp Business API India) — GoPinKaro",
@@ -20,9 +29,7 @@ export const metadata: Metadata = {
     description: "Interakt starts at ₹999/mo but has limitations on team inbox and AI automation. These alternatives offer more for similar or lower pricing.",
     type: "article",
   },
-  alternates: {
-    canonical: "https://gopinkaro.com/interakt-alternative",
-  },
+  alternates: { canonical: "https://gopinkaro.com/interakt-alternative" },
 };
 
 const TOOLS = [
@@ -30,10 +37,9 @@ const TOOLS = [
     rank: 1,
     name: "AiSensy",
     tagline: "Best Interakt Alternative for WhatsApp Automation",
-    badge: "Top Pick",
-    badgeColor: "bg-emerald-100 text-emerald-700",
+    verdict: "Editor's pick — free plan that actually works, ChatGPT chatbot on paid plans, and ₹1,500/mo pricing that beats Interakt's quarterly billing for most teams.",
     price: "Free · ₹1,500/mo Basic · ₹3,200/mo Pro",
-    bestFor: "Indian brands wanting WhatsApp broadcasts, AI chatbot automation, and Shopify integration at a price similar to or lower than Interakt",
+    bestFor: "Indian brands wanting WhatsApp broadcasts, AI chatbot automation, and Shopify integration at a price similar to or lower than Interakt.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Free plan with unlimited chats (basic features)",
@@ -42,36 +48,41 @@ const TOOLS = [
       "Bulk broadcast to opted-in contacts",
       "Shopify abandoned cart recovery via WhatsApp",
     ],
-    cons: ["WhatsApp-only — no Instagram or Messenger", "Team inbox features less polished than Interakt's", "Analytics dashboard can feel limited on Basic plan"],
-    rating: 4.5,
+    cons: [
+      "WhatsApp-only — no Instagram or Messenger",
+      "Team inbox features less polished than Interakt",
+      "Analytics can feel limited on Basic plan",
+    ],
+    ctaHref: "https://aisensy.com",
+    ctaLabel: "Try AiSensy free",
   },
   {
     rank: 2,
     name: "Wati",
     tagline: "Best for Team Inbox + CRM Integration",
-    badge: "Best Team Inbox",
-    badgeColor: "bg-blue-100 text-blue-700",
+    verdict: "The most mature team inbox in the WhatsApp space — if Interakt's shared inbox is where you feel the limits, Wati is the clear upgrade.",
     price: "$59/mo Growth · $119/mo Pro",
-    bestFor: "Mid-market support teams needing a robust shared WhatsApp inbox with CRM integration, SLA tracking, and conditional automation flows",
+    bestFor: "Mid-market support teams needing a robust shared WhatsApp inbox with CRM integration, SLA tracking, and conditional automation flows.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Most mature team inbox in the WhatsApp tools space",
       "CRM integrations: Salesforce, HubSpot, Zoho",
-      "1,000 chatbot sessions on Growth — more than Interakt's Starter",
+      "1,000 chatbot sessions on Growth — more than Interakt Starter",
       "Advanced automation flows with conditional logic",
       "Reliable uptime and established BSP status",
     ],
-    cons: ["$59/mo Growth — plus ~20% markup on Meta per-message fees", "5-user cap on Growth plan; USD billing adds GST for Indian teams"],
-    rating: 4.2,
+    cons: [
+      "$59/mo Growth plus ~20% markup on Meta per-message fees",
+      "5-user cap on Growth plan; USD billing adds GST for Indian teams",
+    ],
   },
   {
     rank: 3,
     name: "Zoko",
     tagline: "Best for Shopify WhatsApp Cart Recovery",
-    badge: "Best E-commerce",
-    badgeColor: "bg-orange-100 text-orange-700",
+    verdict: "More specialized than Interakt for pure e-commerce — purpose-built checkout flows and COD confirmation automation are Zoko's edge over Interakt for D2C brands.",
     price: "$49.99/mo Starter · $59.99/mo Plus",
-    bestFor: "Shopify D2C brands wanting WhatsApp checkout flows, cart abandonment recovery, and COD confirmations — more specialized than Interakt for pure e-commerce",
+    bestFor: "Shopify D2C brands wanting WhatsApp checkout flows, cart abandonment recovery, and COD confirmations — more specialized than Interakt for pure e-commerce.",
     channels: ["WhatsApp Business API"],
     pros: [
       "Purpose-built Shopify WhatsApp checkout and cart recovery",
@@ -80,82 +91,74 @@ const TOOLS = [
       "Multi-agent team inbox included",
       "Click-to-WhatsApp campaign integration",
     ],
-    cons: ["$49.99/mo Starter is more expensive than Interakt in INR", "Instagram is a paid add-on", "Meta's per-message pricing (since Jan 2026) affects volume cost"],
-    rating: 4.1,
+    cons: [
+      "$49.99/mo Starter is more expensive than Interakt in INR",
+      "Instagram is a paid add-on",
+    ],
   },
   {
     rank: 4,
     name: "Respond.io",
     tagline: "Best for Full Omnichannel Support",
-    badge: "Best Omnichannel",
-    badgeColor: "bg-indigo-100 text-indigo-700",
-    price: "$79/mo (Starter)",
-    bestFor: "Support teams managing WhatsApp, Instagram, Facebook, Telegram, email, and live chat in one inbox",
+    verdict: "The only tool here that genuinely solves omnichannel — if Interakt's WhatsApp-only scope is the problem, Respond.io handles every channel in one inbox.",
+    price: "$79/mo Starter",
+    bestFor: "Support teams managing WhatsApp, Instagram, Facebook, Telegram, email, and live chat in one inbox.",
     channels: ["WhatsApp", "Instagram", "Facebook", "Telegram", "Email"],
     pros: [
       "All messaging channels unified in one inbox",
       "AI routing and smart agent assignment",
       "Advanced workflow automation",
-      "Deep CRM integrations (Salesforce, HubSpot, Pipedrive)",
+      "Deep CRM integrations: Salesforce, HubSpot, Pipedrive",
       "Best-in-class omnichannel analytics",
     ],
-    cons: ["$79/mo is expensive for small teams", "More complexity than needed for WhatsApp-only use cases"],
-    rating: 4.4,
+    cons: [
+      "$79/mo is expensive for small teams",
+      "More complexity than needed for WhatsApp-only use cases",
+    ],
   },
   {
     rank: 5,
     name: "Gallabox",
     tagline: "Best for WhatsApp Sales Pipeline in India",
-    badge: "Best Sales India",
-    badgeColor: "bg-orange-100 text-orange-700",
+    verdict: "If your team needs a CRM pipeline inside WhatsApp rather than just a support inbox, Gallabox is the most sales-oriented Indian alternative to Interakt.",
     price: "₹1,499/mo ($18)",
-    bestFor: "Indian sales teams needing a CRM pipeline view with lead scoring inside their WhatsApp inbox",
+    bestFor: "Indian sales teams needing a CRM pipeline view with lead scoring inside their WhatsApp inbox.",
     channels: ["WhatsApp"],
     pros: [
       "Pipeline/CRM view for WhatsApp conversations",
       "Lead scoring and auto-assignment to sales agents",
       "Zoho, HubSpot, Salesforce integrations",
-      "India-based support team",
-      "INR billing available",
+      "India-based support team and INR billing",
     ],
-    cons: ["Higher price than Interakt at ₹1,499/mo", "Less suited for e-commerce order flows"],
-    rating: 4.0,
+    cons: [
+      "Higher price than Interakt at ₹1,499/mo",
+      "Less suited for e-commerce order flows",
+    ],
   },
 ];
 
 const FAQS = [
   {
     q: "What is the best Interakt alternative for India?",
-    a: "AiSensy is the top WhatsApp alternative to Interakt for India. It offers a free plan with unlimited chats, and the Basic plan at ₹1,500/month includes ChatGPT-powered chatbots and bulk broadcasts. Gallabox (₹1,499/mo) is strong for sales teams needing a CRM pipeline inside their WhatsApp inbox. Wati ($59/mo) is better for larger teams needing advanced automation and CRM integrations, though USD billing adds cost.",
+    a: "AiSensy is the top WhatsApp alternative to Interakt for India. It offers a free plan with unlimited chats, and the Basic plan at ₹1,500/month includes ChatGPT-powered chatbots and bulk broadcasts. Gallabox (₹1,499/mo) is strong for sales teams needing a CRM pipeline inside their WhatsApp inbox. Wati ($59/mo) is better for larger teams needing advanced automation and CRM integrations.",
   },
   {
     q: "What is the best Interakt alternative with full team inbox, AI automation, and omnichannel support?",
-    a: "Respond.io is the best option if you need all three — full team inbox, AI automation, and omnichannel support (WhatsApp + Instagram + Facebook + Telegram + email) in one platform. It starts at $79/month. For WhatsApp + AI chatbot at a lower price, AiSensy at ₹1,500/month is the best India-focused alternative.",
+    a: "Respond.io is the best option if you need all three — full team inbox, AI automation, and omnichannel support (WhatsApp + Instagram + Facebook + Telegram + email) in one platform, starting at $79/month. For WhatsApp + AI chatbot at a lower price, AiSensy at ₹1,500/month is the best India-focused alternative.",
   },
   {
     q: "Why are people looking for Interakt alternatives?",
-    a: "Common reasons: (1) Interakt's team inbox and automation limits on the Starter plan are restrictive, (2) Interakt charges a 12–15% markup on top of Meta's WhatsApp per-message fees — costs add up at scale, (3) No Instagram or Facebook DM support, (4) Some teams want AI chatbot capabilities that Interakt's Starter plan doesn't include. The quarterly billing structure (₹3,499/quarter) also means you pay upfront rather than monthly.",
+    a: "Common reasons: (1) Interakt's team inbox and automation limits on the Starter plan are restrictive, (2) Interakt charges a 12–15% markup on top of Meta's WhatsApp per-message fees — costs add up at scale, (3) No Instagram or Facebook DM support, (4) The quarterly billing structure (₹3,499/quarter) means you pay upfront rather than monthly.",
   },
   {
     q: "Is there a free Interakt alternative for WhatsApp?",
-    a: "AiSensy has a free plan with unlimited chats (limited automation features) — the closest thing to a free WhatsApp Business API tool. Interakt offers a 14-day free trial but no permanent free plan. If your channel is Instagram rather than WhatsApp, ReplyKaro has a free plan for 1,000 Instagram DMs/month — but it does not support WhatsApp.",
+    a: "AiSensy has a free plan with unlimited chats (limited automation features) — the closest thing to a free WhatsApp Business API tool. Interakt offers a 14-day free trial but no permanent free plan. For Instagram (not WhatsApp), ReplyKaro has a free plan for 1,000 Instagram DMs/month.",
   },
   {
     q: "What is the best Interakt alternative for WhatsApp e-commerce automation?",
     a: "Zoko ($49.99/mo Starter) is more specialized for Shopify e-commerce — it has native cart abandonment recovery, WhatsApp checkout flows, and COD confirmation automation purpose-built for D2C. AiSensy (₹1,500/mo) is the cheaper option for broadcast campaigns and Shopify abandoned cart notifications via WhatsApp.",
   },
 ];
-
-function StarRating({ rating }: { rating: number }) {
-  return (
-    <div className="flex items-center gap-1">
-      {[1, 2, 3, 4, 5].map((star) => (
-        <Star key={star} className={`w-4 h-4 ${star <= Math.round(rating) ? "fill-amber-400 text-amber-400" : "text-gray-200"}`} />
-      ))}
-      <span className="text-sm font-medium ml-1">{rating}</span>
-    </div>
-  );
-}
 
 export default function InteraktAlternativePage() {
   return (
@@ -194,142 +197,55 @@ export default function InteraktAlternativePage() {
         }}
       />
 
-      <div style={{ background: "var(--background)", color: "var(--foreground)" }}>
-        <nav style={{ borderBottom: "1px solid var(--border)" }} className="sticky top-0 z-50 bg-white">
-          <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-semibold text-base">
-              <Zap className="w-5 h-5 text-emerald-600" />
-              <span className="font-display">GoPinKaro</span>
-            </Link>
-            <Link href="mailto:hello@gopinkaro.com" className="text-sm font-medium px-4 py-1.5 rounded-lg text-white" style={{ background: "var(--accent)" }}>
-              Get Listed
-            </Link>
+      <AlternativeNav />
+
+      <main className="max-w-5xl mx-auto px-5 sm:px-8 py-10">
+        <Breadcrumb label="Interakt Alternative" />
+
+        <ArticleHeader
+          date="Updated September 2026"
+          count="5 tools"
+          title="5 Best Interakt Alternatives in 2026"
+          accentTitle="WhatsApp Business API for India, Compared"
+          intro="Interakt is a popular WhatsApp Business API tool in India, but it's WhatsApp-only and has limits on team inbox size and AI automation. These alternatives give you more channels, stronger automation, or lower pricing — some with monthly billing instead of Interakt's quarterly structure."
+        />
+
+        <QuickPicks
+          picks={[
+            { label: "Best AI automation", value: "AiSensy — ₹1,500/mo, smart chatbot + bulk broadcasts" },
+            { label: "Best team inbox", value: "Wati — $59/mo, mature platform with CRM integration" },
+            { label: "Full omnichannel", value: "Respond.io — $79/mo, all channels in one inbox" },
+            { label: "Best sales pipeline", value: "Gallabox — ₹1,499/mo, CRM view inside WhatsApp inbox" },
+          ]}
+        />
+
+        <section className="mb-14">
+          <h2 className="font-display font-bold text-[1.6rem] mb-8">The 5 Best Interakt Alternatives</h2>
+          <div className="space-y-5">
+            {TOOLS.map((tool) => (
+              <ToolCard key={tool.name} {...tool} />
+            ))}
           </div>
-        </nav>
+        </section>
 
-        <main className="max-w-5xl mx-auto px-4 sm:px-6 py-10">
-          <nav className="flex items-center gap-1.5 text-sm mb-6" style={{ color: "var(--text-secondary)" }}>
-            <Link href="/" className="hover:underline">GoPinKaro</Link>
-            <ChevronRight className="w-3.5 h-3.5" />
-            <span style={{ color: "var(--foreground)" }}>Interakt Alternative</span>
-          </nav>
+        <FaqSection faqs={FAQS} />
 
-          <header className="mb-10">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="text-xs font-mono px-2.5 py-1 rounded-full" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>Updated September 2026</span>
-              <span className="text-xs" style={{ color: "var(--text-secondary)" }}>5 tools reviewed</span>
-            </div>
-            <h1 className="font-display text-3xl sm:text-4xl font-bold leading-tight mb-4">
-              5 Best Interakt Alternatives in 2026
-              <br />
-              <span style={{ color: "var(--accent)" }}>WhatsApp Business API for India, Compared</span>
-            </h1>
-            <p className="text-lg mb-6" style={{ color: "var(--text-secondary)", maxWidth: "700px" }}>
-              Interakt is a popular WhatsApp Business API tool in India, but it's WhatsApp-only and has
-              limits on team inbox and AI automation. These alternatives give you more channels, stronger
-              automation, or lower pricing.
-            </p>
-            <div className="p-4 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
-              <p className="text-sm font-semibold mb-2">Quick picks:</p>
-              <ul className="space-y-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Lowest cost + multi-channel:</span> ReplyKaro — ₹99/mo, WhatsApp + Instagram</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best AI automation:</span> AiSensy — ₹999/mo, smart chatbot + bulk broadcasts</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best team inbox:</span> Wati — $49/mo, mature platform with CRM integration</li>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Full omnichannel:</span> Respond.io — $79/mo, all channels in one inbox</li>
-              </ul>
-            </div>
-          </header>
+        <RelatedLinks
+          links={[
+            { label: "ManyChat Alternative", href: "/manychat-alternative" },
+            { label: "Wati Alternative", href: "/wati-alternative" },
+            { label: "Zoko Alternative", href: "/zoko-alternative" },
+            { label: "Intercom Alternative", href: "/intercom-alternative" },
+          ]}
+        />
 
-          <section className="mb-12">
-            <h2 className="font-display text-2xl font-bold mb-6">The 5 Best Interakt Alternatives</h2>
-            <div className="space-y-6">
-              {TOOLS.map((tool) => (
-                <div key={tool.name} className="rounded-2xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
-                  <div className="p-6">
-                    <div className="flex items-start justify-between flex-wrap gap-3 mb-3">
-                      <div className="flex items-center gap-3">
-                        <span className="font-mono text-xs px-2 py-0.5 rounded" style={{ background: "var(--surface-2)", color: "var(--text-secondary)" }}>#{tool.rank}</span>
-                        <h3 className="font-display text-xl font-bold">{tool.name}</h3>
-                        <span className={`text-xs font-medium px-2.5 py-1 rounded-full ${tool.badgeColor}`}>{tool.badge}</span>
-                      </div>
-                      <StarRating rating={tool.rating} />
-                    </div>
-                    <p className="font-semibold mb-1">{tool.tagline}</p>
-                    <p className="text-sm mb-4" style={{ color: "var(--text-secondary)" }}><strong>Best for:</strong> {tool.bestFor}</p>
-                    <div className="flex flex-wrap gap-2 mb-4">
-                      {tool.channels.map((ch) => (
-                        <span key={ch} className="text-xs px-2.5 py-1 rounded-full border" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>{ch}</span>
-                      ))}
-                      <span className="text-xs px-2.5 py-1 rounded-full font-medium" style={{ background: "var(--accent-dim)", color: "var(--accent)" }}>{tool.price}</span>
-                    </div>
-                    <div className="grid sm:grid-cols-2 gap-4">
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-secondary)" }}>Pros</p>
-                        <ul className="space-y-1.5">{tool.pros.map((pro) => (<li key={pro} className="flex items-start gap-2 text-sm"><Check className="w-4 h-4 mt-0.5 shrink-0 text-emerald-500" />{pro}</li>))}</ul>
-                      </div>
-                      <div>
-                        <p className="text-xs font-semibold uppercase tracking-wide mb-2" style={{ color: "var(--text-secondary)" }}>Cons</p>
-                        <ul className="space-y-1.5">{tool.cons.map((con) => (<li key={con} className="flex items-start gap-2 text-sm"><X className="w-4 h-4 mt-0.5 shrink-0 text-red-400" />{con}</li>))}</ul>
-                      </div>
-                    </div>
-                  </div>
-                  {tool.rank === 1 && (
-                    <div className="px-6 py-3 flex items-center justify-between" style={{ background: "var(--accent-dim)", borderTop: "1px solid var(--border)" }}>
-                      <p className="text-sm font-medium" style={{ color: "var(--accent)" }}>⭐ Our top pick — ₹99/mo flat, free plan, WhatsApp + Instagram in one</p>
-                      <a href="https://replykaro.com" target="_blank" rel="noopener noreferrer" className="flex items-center gap-1 text-sm font-semibold" style={{ color: "var(--accent)" }}>
-                        Try free <ArrowRight className="w-3.5 h-3.5" />
-                      </a>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </div>
-          </section>
+        <GetListedCta
+          subject="Get Listed — Interakt Alternative Page"
+          pageTraffic="30–60 searches/month from Indian businesses evaluating WhatsApp API tools"
+        />
+      </main>
 
-          <section className="mb-12">
-            <h2 className="font-display text-2xl font-bold mb-6">Frequently Asked Questions</h2>
-            <div className="space-y-4">
-              {FAQS.map((faq) => (
-                <div key={faq.q} className="p-5 rounded-xl border" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
-                  <h3 className="font-semibold mb-2">{faq.q}</h3>
-                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{faq.a}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-
-          <section className="mb-12">
-            <h2 className="font-display text-xl font-bold mb-4">More WhatsApp Tool Comparisons</h2>
-            <div className="flex flex-wrap gap-3">
-              {[
-                { label: "ManyChat Alternative", href: "/manychat-alternative" },
-                { label: "Wati Alternative", href: "/wati-alternative" },
-                { label: "Zoko Alternative", href: "/zoko-alternative" },
-                { label: "Intercom Alternative", href: "/intercom-alternative" },
-              ].map((link) => (
-                <Link key={link.href} href={link.href} className="text-sm px-4 py-2 rounded-lg border flex items-center gap-1 hover:border-emerald-300 transition-colors" style={{ borderColor: "var(--border)", color: "var(--text-secondary)" }}>
-                  {link.label} <ArrowRight className="w-3 h-3" />
-                </Link>
-              ))}
-            </div>
-          </section>
-
-          <section className="rounded-2xl p-8 text-center" style={{ background: "var(--surface-2)", border: "1px solid var(--border)" }}>
-            <p className="text-xs font-mono uppercase tracking-widest mb-3" style={{ color: "var(--accent)" }}>For tool makers</p>
-            <h2 className="font-display text-2xl font-bold mb-3">Is Your Tool an Interakt Alternative?</h2>
-            <p className="text-sm mb-6 mx-auto max-w-md" style={{ color: "var(--text-secondary)" }}>
-              This page gets 30–60 searches/month from Indian businesses evaluating WhatsApp API tools. Get your tool featured here.
-            </p>
-            <a href="mailto:hello@gopinkaro.com?subject=Get Listed — Interakt Alternative Page" className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-white font-medium" style={{ background: "var(--accent)" }}>
-              Get Listed <ArrowRight className="w-4 h-4" />
-            </a>
-          </section>
-        </main>
-
-        <footer className="mt-16 py-8 text-center text-sm" style={{ borderTop: "1px solid var(--border)", color: "var(--text-secondary)" }}>
-          <p>Built by <Link href="/" className="hover:underline font-medium">GoPinKaro</Link> · <a href="mailto:hello@gopinkaro.com" className="hover:underline">hello@gopinkaro.com</a></p>
-        </footer>
-      </div>
+      <AlternativeFooter />
     </>
   );
 }
