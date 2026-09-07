@@ -127,6 +127,7 @@ export function ToolCard({
   cons,
   ctaHref,
   ctaLabel,
+  ctaNote,
 }: {
   rank: number;
   name: string;
