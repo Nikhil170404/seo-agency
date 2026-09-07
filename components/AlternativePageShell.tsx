@@ -105,8 +105,8 @@ export function QuickPicks({ picks }: { picks: { label: string; value: string }[
       </div>
       <div className="divide-y divide-[#E1E5EE]">
         {picks.map((p) => (
-          <div key={p.label} className="flex items-start gap-4 px-6 py-4">
-            <span className="text-[13px] font-semibold text-[#0A0F1E] w-44 shrink-0">{p.label}</span>
+          <div key={p.label} className="flex flex-col sm:flex-row sm:items-start gap-1 sm:gap-4 px-6 py-4">
+            <span className="text-[12px] font-semibold text-[#0A0F1E] sm:w-44 shrink-0">{p.label}</span>
             <span className="text-[13px] text-[#5A6478]">{p.value}</span>
           </div>
         ))}
@@ -148,21 +148,21 @@ export function ToolCard({
       className={`rounded-2xl border overflow-hidden ${isTop ? "border-[#047857]/40 shadow-sm shadow-emerald-50" : "border-[#E1E5EE]"}`}
     >
       {/* Card header */}
-      <div className={`px-6 pt-6 pb-0 ${isTop ? "bg-[#F0FDF8]" : "bg-white"}`}>
-        <div className="flex items-start justify-between gap-4 mb-4">
+      <div className={`px-4 sm:px-6 pt-5 sm:pt-6 pb-0 ${isTop ? "bg-[#F0FDF8]" : "bg-white"}`}>
+        <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
           <div className="flex items-center gap-3">
             <span
-              className={`font-display font-bold text-[2.2rem] leading-none select-none ${isTop ? "text-[#047857]/20" : "text-[#E1E5EE]"}`}
+              className={`font-display font-bold text-[2rem] sm:text-[2.2rem] leading-none select-none ${isTop ? "text-[#047857]/20" : "text-[#E1E5EE]"}`}
             >
               {String(rank).padStart(2, "0")}
             </span>
             <div>
-              <h3 className="font-display font-bold text-[1.3rem] leading-tight">{name}</h3>
-              <p className="text-[13px] text-[#5A6478] mt-0.5">{tagline}</p>
+              <h3 className="font-display font-bold text-[1.1rem] sm:text-[1.3rem] leading-tight">{name}</h3>
+              <p className="text-[12px] sm:text-[13px] text-[#5A6478] mt-0.5">{tagline}</p>
             </div>
           </div>
-          <div className="shrink-0 text-right">
-            <p className="text-[13px] font-semibold text-[#0A0F1E]">{price}</p>
+          <div className="shrink-0">
+            <p className="text-[12px] sm:text-[13px] font-semibold text-[#0A0F1E]">{price}</p>
           </div>
         </div>
 
@@ -173,7 +173,7 @@ export function ToolCard({
       </div>
 
       {/* Card body */}
-      <div className="px-6 py-5 bg-white">
+      <div className="px-4 sm:px-6 py-5 bg-white">
         {/* Best for */}
         <div className="mb-5">
           <p className="text-[11px] font-semibold text-[#96A0B5] uppercase tracking-widest mb-1.5">Best for</p>
@@ -229,7 +229,7 @@ export function ToolCard({
 
       {/* CTA row for top pick */}
       {ctaHref && ctaLabel && (
-        <div className="px-6 py-3.5 border-t border-[#D1FAE5] bg-[#F0FDF8] flex items-center justify-between">
+        <div className="px-4 sm:px-6 py-3.5 border-t border-[#D1FAE5] bg-[#F0FDF8] flex flex-wrap items-center justify-between gap-2">
           <p className="text-[13px] font-medium text-[#047857]">{ctaNote ?? "Free plan available — no credit card"}</p>
           <a
             href={ctaHref}
@@ -284,7 +284,7 @@ export function RelatedLinks({ links }: { links: { label: string; href: string }
 
 export function GetListedCta({ subject, pageTraffic }: { subject: string; pageTraffic: string }) {
   return (
-    <div className="bg-[#0A0F1E] rounded-2xl px-8 py-12 flex flex-col md:flex-row md:items-center justify-between gap-8">
+    <div className="bg-[#0A0F1E] rounded-2xl px-6 md:px-8 py-10 md:py-12 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
       <div className="max-w-sm">
         <p className="text-[11px] font-semibold text-[#34D399] uppercase tracking-[0.14em] mb-3">For tool makers</p>
         <h2 className="font-display font-bold text-white text-[1.5rem] leading-[1.15] mb-3">

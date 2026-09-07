@@ -161,7 +161,7 @@ export default function Home() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   const navLinks = [
-    { label: t("nav.services"), href: "/saas-seo-agency" },
+    { label: "Comparisons", href: "#comparisons" },
     { label: t("nav.howItWorks"), href: "#how-it-works" },
     { label: t("nav.caseStudy"), href: "#case-study" },
     { label: t("nav.pricing"), href: "#pricing" },
@@ -312,17 +312,17 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 pt-16 pb-12 md:pt-24 md:pb-20">
-        <div className="grid md:grid-cols-[1fr_420px] gap-12 lg:gap-16 items-center">
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 pt-8 pb-10 md:pt-20 md:pb-20">
+        <div className="grid md:grid-cols-[1fr_420px] gap-8 lg:gap-16 items-center">
           {/* Left */}
           <div>
-            <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-7">
+            <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-5 md:mb-7">
               {t("hero.badge")}
             </p>
 
             <h1
-              className="font-display font-bold leading-[1.04] tracking-tight mb-6"
-              style={{ fontSize: "clamp(2.6rem, 6vw, 4rem)" }}
+              className="font-display font-bold leading-[1.04] tracking-tight mb-5 md:mb-6"
+              style={{ fontSize: "clamp(2rem, 6vw, 4rem)" }}
             >
               {t("hero.headline1")}
               <br />
@@ -330,21 +330,21 @@ export default function Home() {
               <span className="text-[#047857]">{t("hero.headline3")}</span>
             </h1>
 
-            <p className="text-[17px] text-[#5A6478] leading-[1.7] mb-10 max-w-lg">
+            <p className="text-[15px] md:text-[17px] text-[#5A6478] leading-[1.7] mb-8 md:mb-10 max-w-lg">
               {t("hero.subheadline")}
             </p>
 
             <div className="flex flex-wrap gap-3">
               <a
                 href="#pricing"
-                className="inline-flex items-center gap-2 bg-[#047857] text-white font-semibold px-6 py-3.5 rounded-xl hover:bg-[#065f46] transition-colors text-sm"
+                className="inline-flex items-center gap-2 bg-[#047857] text-white font-semibold px-5 py-3 md:px-6 md:py-3.5 rounded-xl hover:bg-[#065f46] transition-colors text-sm"
               >
                 {t("hero.ctaPrimary")}
                 <ArrowRight size={15} />
               </a>
               <a
                 href="#case-study"
-                className="inline-flex items-center gap-2 text-[#0A0F1E] font-semibold px-6 py-3.5 rounded-xl border border-[#E1E5EE] hover:border-[#C4CADB] hover:bg-[#F7F8FA] transition-colors text-sm"
+                className="inline-flex items-center gap-2 text-[#0A0F1E] font-semibold px-5 py-3 md:px-6 md:py-3.5 rounded-xl border border-[#E1E5EE] hover:border-[#C4CADB] hover:bg-[#F7F8FA] transition-colors text-sm"
               >
                 {t("hero.ctaSecondary")}
                 <ArrowUpRight size={15} />
@@ -353,7 +353,7 @@ export default function Home() {
           </div>
 
           {/* Right — GSC growth chart */}
-          <div className="hidden md:block">
+          <div className="w-full">
             <GrowthChart />
           </div>
         </div>
@@ -362,15 +362,13 @@ export default function Home() {
       {/* ── STATS STRIP ── */}
       <div className="border-y border-[#E1E5EE]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-[#E1E5EE]">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-[#E1E5EE]">
             {stats.map((s) => (
-              <div key={s.label} className="py-8 px-6 first:pl-0 last:pr-0">
-                <p
-                  className="font-display font-bold text-[2rem] text-[#047857] leading-none mb-2 stat-ticker"
-                >
+              <div key={s.label} className="py-7 px-6 bg-white">
+                <p className="font-display font-bold text-[1.75rem] md:text-[2rem] text-[#047857] leading-none mb-2 stat-ticker">
                   {s.value}
                 </p>
-                <p className="text-[13px] text-[#5A6478] leading-snug">{s.label}</p>
+                <p className="text-[12px] md:text-[13px] text-[#5A6478] leading-snug">{s.label}</p>
               </div>
             ))}
           </div>
@@ -378,7 +376,7 @@ export default function Home() {
       </div>
 
       {/* ── PROBLEM ── */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
         <div className="grid md:grid-cols-2 gap-14 items-start">
           <div className="md:sticky md:top-24">
             <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-5">
@@ -397,7 +395,7 @@ export default function Home() {
 
           {/* Keyword data table */}
           <div>
-            <div className="rounded-2xl border border-[#E1E5EE] overflow-hidden">
+            <div className="rounded-2xl border border-[#E1E5EE] overflow-hidden overflow-x-auto">
               <div className="px-5 py-3.5 bg-[#F7F8FA] border-b border-[#E1E5EE] flex items-center justify-between">
                 <span className="text-[11px] font-semibold text-[#96A0B5] uppercase tracking-widest">Keyword</span>
                 <div className="flex items-center gap-8">
@@ -440,8 +438,8 @@ export default function Home() {
 
       {/* ── HOW IT WORKS ── */}
       <section id="how-it-works" className="border-t border-[#E1E5EE] bg-[#F7F8FA]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-16">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
+          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-10 md:mb-16">
             <div>
               <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-4">
                 {t("howItWorks.label")}
@@ -462,7 +460,7 @@ export default function Home() {
             {howItWorks.map((step, i) => {
               const Icon = HOW_IT_WORKS_ICONS[i];
               return (
-                <div key={step.step} className="bg-white p-8 md:p-10">
+                <div key={step.step} className="bg-white p-6 md:p-10">
                   <div className="flex items-start justify-between mb-8">
                     <span className="font-display font-bold text-[3.5rem] leading-none text-[#EFF1F5] select-none">
                       {step.step}
@@ -485,8 +483,8 @@ export default function Home() {
       </section>
 
       {/* ── INDUSTRIES ── */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-        <div className="grid md:grid-cols-[280px_1fr] gap-12 items-start">
+      <section id="comparisons" className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
+        <div className="grid md:grid-cols-[280px_1fr] gap-8 md:gap-12 items-start">
           <div className="md:sticky md:top-24">
             <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-4">
               {t("industries.label")}
@@ -527,9 +525,9 @@ export default function Home() {
 
       {/* ── CASE STUDY ── */}
       <section id="case-study" className="bg-[#0A0F1E]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
           {/* Header row */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-16 pb-16 border-b border-white/10">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10 pb-10 md:mb-16 md:pb-16 border-b border-white/10">
             <div className="max-w-xl">
               <p className="text-[11px] font-semibold text-[#34D399] uppercase tracking-[0.14em] mb-4">
                 {t("caseStudy.label")}
@@ -570,7 +568,7 @@ export default function Home() {
       </section>
 
       {/* ── PRICING ── */}
-      <section id="pricing" className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
+      <section id="pricing" className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
         <div className="mb-14">
           <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-4">
             {t("pricing.label")}
@@ -659,8 +657,8 @@ export default function Home() {
 
       {/* ── FAQ ── */}
       <section id="faq" className="border-t border-[#E1E5EE] bg-[#F7F8FA]">
-        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-20 md:py-28">
-          <div className="grid md:grid-cols-[300px_1fr] gap-16 items-start">
+        <div className="max-w-6xl mx-auto px-5 sm:px-8 py-12 md:py-24">
+          <div className="grid md:grid-cols-[300px_1fr] gap-8 md:gap-16 items-start">
             <div className="md:sticky md:top-24">
               <p className="text-[11px] font-semibold text-[#047857] uppercase tracking-[0.14em] mb-4">
                 {t("faq.label")}
@@ -711,8 +709,8 @@ export default function Home() {
       </section>
 
       {/* ── CTA BANNER ── */}
-      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-16 md:py-20">
-        <div className="bg-[#0A0F1E] rounded-2xl px-8 md:px-14 py-14 md:py-16 flex flex-col md:flex-row md:items-center justify-between gap-8">
+      <section className="max-w-6xl mx-auto px-5 sm:px-8 py-10 md:py-16">
+        <div className="bg-[#0A0F1E] rounded-2xl px-6 md:px-14 py-10 md:py-16 flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
           <div className="max-w-xl">
             <h2 className="font-display font-bold text-white text-[1.8rem] md:text-[2.2rem] leading-[1.1] mb-3 text-balance">
               {t("cta.headline")}
