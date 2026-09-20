@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { getAllSlugs } from "@/lib/pages-data";
 
 const BASE_URL = "https://gopinkaro.com";
 const LOCALES = ["en", "es", "pt", "hi", "de", "fr", "ja", "zh", "ar", "ru"];
@@ -19,16 +20,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: locale === DEFAULT_LOCALE ? 1.0 : 0.9,
   }));
 
-  const englishPages = [
+  // Static high-priority pages
+  const staticPages = [
     { path: "/saas-seo-agency", priority: 0.95 },
     { path: "/manychat-alternative", priority: 0.9 },
-    { path: "/wati-alternative", priority: 0.85 },
-    { path: "/zoko-alternative", priority: 0.82 },
-    { path: "/interakt-alternative", priority: 0.82 },
-    { path: "/intercom-alternative", priority: 0.85 },
-    { path: "/hubspot-alternative", priority: 0.85 },
-    { path: "/ahrefs-alternative", priority: 0.85 },
-    { path: "/semrush-alternative", priority: 0.85 },
+    { path: "/wati-alternative", priority: 0.88 },
+    { path: "/zoko-alternative", priority: 0.85 },
+    { path: "/interakt-alternative", priority: 0.85 },
+    { path: "/intercom-alternative", priority: 0.87 },
+    { path: "/hubspot-alternative", priority: 0.87 },
+    { path: "/ahrefs-alternative", priority: 0.87 },
+    { path: "/semrush-alternative", priority: 0.87 },
   ].map(({ path, priority }) => ({
     url: `${BASE_URL}${path}`,
     lastModified: today,
@@ -36,5 +38,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
-  return [...homepageEntries, ...englishPages];
+  // Dynamic pages from pages-data.ts
+  const dynamicPages = getAllSlugs().map((slug) => ({
+    url: `${BASE_URL}/${slug}`,
+    lastModified: today,
+    changeFrequency: "monthly" as const,
+    priority: 0.82,
+  }));
+
+  return [...homepageEntries, ...staticPages, ...dynamicPages];
 }
