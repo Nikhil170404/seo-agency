@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { Check, X, ArrowRight, ChevronRight, Zap, Star } from "lucide-react";
+import { Check, X, ArrowRight, ChevronRight, Star } from "lucide-react";
+import GoPinKaroLogo from "@/components/GoPinKaroLogo";
 
 export interface Tool {
   rank: number;
@@ -65,7 +66,14 @@ export default function AlternativePage({ data }: { data: PageData }) {
           "@type": "Organization",
           name: "GoPinKaro",
           url: "https://gopinkaro.com",
+          logo: {
+            "@type": "ImageObject",
+            url: "https://gopinkaro.com/logo.svg",
+            width: 200,
+            height: 60,
+          },
         },
+        image: "https://gopinkaro.com/og-image.png",
         dateModified: new Date().toISOString().split("T")[0],
         mainEntityOfPage: `https://gopinkaro.com${data.canonicalPath}`,
       },
@@ -106,11 +114,8 @@ export default function AlternativePage({ data }: { data: PageData }) {
           style={{ borderBottom: "1px solid var(--border)" }}
         >
           <div className="max-w-5xl mx-auto px-4 sm:px-6 h-14 flex items-center justify-between">
-            <Link href="/" className="flex items-center gap-2 font-semibold text-base">
-              <div className="w-6 h-6 rounded-md flex items-center justify-center" style={{ background: "var(--accent)" }}>
-                <Zap className="w-3 h-3 text-white" fill="white" />
-              </div>
-              <span className="font-display">GoPinKaro</span>
+            <Link href="/" aria-label="GoPinKaro home">
+              <GoPinKaroLogo size={26} />
             </Link>
             <div className="flex items-center gap-4">
               <Link

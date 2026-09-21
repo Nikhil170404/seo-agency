@@ -1,0 +1,12 @@
+<svg width="200" height="60" viewBox="0 0 200 60" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="GoPinKaro">
+  <title>GoPinKaro</title>
+  <!-- Icon mark -->
+  <rect x="0" y="10" width="40" height="40" rx="8" fill="#059669"/>
+  <rect x="8" y="30" width="6" height="12" rx="1.5" fill="white" fill-opacity="0.55"/>
+  <rect x="17" y="24" width="6" height="18" rx="1.5" fill="white" fill-opacity="0.75"/>
+  <rect x="26" y="18" width="6" height="24" rx="1.5" fill="white"/>
+  <path d="M29 17 L32 13 L35 17" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="32" y1="13" x2="32" y2="20" stroke="white" stroke-width="2" stroke-linecap="round"/>
+  <!-- Wordmark -->
+  <text x="50" y="38" font-family="Inter, system-ui, sans-serif" font-weight="700" font-size="22" fill="#0A0F1E" letter-spacing="-0.5">GoPinKaro</text>
+</svg>
