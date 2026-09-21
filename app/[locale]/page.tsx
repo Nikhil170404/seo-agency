@@ -12,10 +12,10 @@ import {
   ChevronDown,
   Menu,
   X,
-  Zap,
   Globe,
 } from "lucide-react";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
+import GoPinKaroLogo from "@/components/GoPinKaroLogo";
 
 const INDUSTRIES = [
   {
@@ -246,13 +246,8 @@ export default function Home() {
       {/* ── NAVBAR ── */}
       <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#E1E5EE]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 h-[60px] flex items-center justify-between">
-          <a href="/" className="flex items-center gap-2.5 group">
-            <div className="w-7 h-7 rounded-lg bg-[#047857] flex items-center justify-center">
-              <Zap size={13} className="text-white" fill="white" />
-            </div>
-            <span className="font-display font-bold text-[15px] tracking-tight">
-              GoPinKaro
-            </span>
+          <a href="/" aria-label="GoPinKaro home">
+            <GoPinKaroLogo size={28} />
           </a>
 
           <nav className="hidden md:flex items-center gap-8">
@@ -732,11 +727,8 @@ export default function Home() {
       {/* ── FOOTER ── */}
       <footer className="border-t border-[#E1E5EE]">
         <div className="max-w-6xl mx-auto px-5 sm:px-8 py-10 flex flex-col md:flex-row items-center justify-between gap-5">
-          <a href="/" className="flex items-center gap-2">
-            <div className="w-6 h-6 rounded-md bg-[#047857] flex items-center justify-center">
-              <Zap size={12} className="text-white" fill="white" />
-            </div>
-            <span className="font-display font-bold text-[14px]">GoPinKaro</span>
+          <a href="/" aria-label="GoPinKaro home">
+            <GoPinKaroLogo size={24} />
           </a>
 
           <nav className="flex items-center gap-6 flex-wrap justify-center">
