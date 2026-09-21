@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "7 Best HubSpot Alternatives in 2026 (CRM + Marketing Automation)",
     description:
-      "HubSpot's Marketing Hub starts at $800/mo for 2,000 contacts. These alternatives give you CRM, email, and automation for far less.",
+      "HubSpot's Marketing Hub starts at $890/mo for 2,000 contacts. These alternatives give you CRM, email, and automation for far less.",
     type: "article",
   },
   alternates: {
@@ -31,20 +31,23 @@ const TOOLS = [
   {
     rank: 1,
     name: "ReplyKaro",
-    tagline: "Best HubSpot Alternative for WhatsApp + Instagram Marketing",
-    badge: "Top Pick India",
-    badgeColor: "bg-emerald-100 text-emerald-700",
-    price: "Free forever · ₹99/mo paid",
-    bestFor: "Indian D2C brands and SMBs wanting WhatsApp Business API + Instagram DM marketing automation without HubSpot's enterprise pricing",
-    channels: ["WhatsApp", "Instagram", "Facebook"],
+    tagline: "Best Alternative for Instagram DM Marketing (Different Channel from HubSpot)",
+    badge: "Instagram Automation",
+    badgeColor: "bg-pink-100 text-pink-700",
+    price: "Free · ₹99/mo ($3/mo) · $9/mo Pro",
+    bestFor: "Brands whose growth channel is Instagram — comment-to-DM campaigns, story reply automation, follower gating. Complements email/CRM; does not replace it.",
+    channels: ["Instagram DMs only"],
     pros: [
-      "Free Forever plan — no credit card required",
-      "₹99/mo vs HubSpot Marketing Hub's $800/mo minimum",
-      "INR billing via UPI & Razorpay (no forex + GST on USD)",
-      "WhatsApp broadcast campaigns with automation flows",
-      "Instagram DM automation + lead capture in one tool",
+      "Free plan: 1,000 Instagram DMs/month — no credit card",
+      "₹99/mo for 30,000 DMs — Meta verified, no account bans",
+      "Comment → DM: trigger automated DMs from reel comments",
+      "Follow Gate: links only delivered after the user follows",
+      "INR billing via UPI, no forex or GST on USD invoices",
     ],
-    cons: ["No built-in CRM pipeline (focus is messaging automation)", "Email marketing requires integration"],
+    cons: [
+      "Instagram-only — no CRM, email, WhatsApp, or web tracking",
+      "Not a HubSpot replacement — use alongside HubSpot, not instead",
+    ],
     rating: 4.8,
   },
   {
@@ -57,7 +60,7 @@ const TOOLS = [
     bestFor: "Growing businesses wanting sophisticated email automation, lead scoring, and CRM pipeline at a fraction of HubSpot's cost",
     channels: ["Email", "SMS", "Site Tracking", "CRM"],
     pros: [
-      "Starts at $15/mo vs HubSpot's $800/mo for real automation",
+      "Starts at $15/mo vs HubSpot's $890/mo for real automation",
       "Visual automation builder — more powerful than HubSpot's",
       "Built-in CRM with deal pipeline and sales sequences",
       "Lead scoring and predictive sending",
@@ -166,23 +169,23 @@ const TOOLS = [
 const FAQS = [
   {
     q: "What is the best free HubSpot alternative?",
-    a: "HubSpot's free CRM is genuinely good — but its free Marketing Hub is very limited. For free alternatives: Brevo offers 300 emails/day free with unlimited contacts, Zoho CRM is free for 3 users with real CRM features, Mailchimp is free for up to 500 contacts, and ReplyKaro is free forever for WhatsApp + Instagram marketing automation (a channel HubSpot's free plan doesn't cover at all).",
+    a: "HubSpot's free CRM is genuinely good — but its free Marketing Hub is very limited. For free alternatives: Brevo offers 300 emails/day free with unlimited contacts, Zoho CRM is free for 3 users with real CRM features, Mailchimp is free for up to 500 contacts, and ReplyKaro is free forever for Instagram DM automation (comment-to-DM flows, Follow Gate, story replies — Instagram only, not WhatsApp or email).",
   },
   {
     q: "Why do businesses look for HubSpot alternatives?",
-    a: "HubSpot's pricing is the main reason. The free plan has major limitations. The Starter bundle ($20/mo) is reasonable, but Marketing Hub Professional — which includes real automation — starts at $800/month for 2,000 contacts and scales to thousands per month. Sales Hub Professional is $90/user/month. For SMBs and startups, this pricing is prohibitive compared to alternatives that offer 80% of the functionality for 10–20% of the cost.",
+    a: "HubSpot's pricing is the main reason. The free plan has major limitations. The Starter bundle ($20/mo) is reasonable, but Marketing Hub Professional — which includes real automation — starts at $890/month for 2,000 contacts and scales to thousands per month. Sales Hub Professional is $90/user/month. For SMBs and startups, this pricing is prohibitive compared to alternatives that offer 80% of the functionality for 10–20% of the cost.",
   },
   {
     q: "What is the best HubSpot alternative for Indian businesses?",
-    a: "For Indian businesses, Zoho CRM ($20/user/mo, INR billing available) and Brevo ($25/mo) offer the closest HubSpot alternatives. For WhatsApp-first marketing — the primary channel in India — ReplyKaro at ₹99/month is the best option: it covers WhatsApp Business API + Instagram DM automation with INR billing, UPI payment, and GST invoices.",
+    a: "For Indian businesses, Zoho CRM ($20/user/mo, INR billing available) and Brevo ($25/mo) offer the closest HubSpot alternatives with INR billing. For WhatsApp marketing automation, Interakt (₹999/mo) and AiSensy (₹1,500/mo) are purpose-built and much cheaper than HubSpot. For Instagram DM automation specifically, ReplyKaro at ₹99/month is the best in India — comment-to-DM flows, Follow Gate, story replies — Instagram only, not WhatsApp.",
   },
   {
     q: "Is HubSpot good for WhatsApp marketing?",
-    a: "HubSpot has limited native WhatsApp integration. You can connect WhatsApp Business through third-party integrations, but it's not a core feature. For WhatsApp-first marketing automation — broadcasts, drip sequences, chatbots — purpose-built tools like ReplyKaro, Wati, Interakt, or AiSensy are far more capable and cost far less.",
+    a: "HubSpot has limited native WhatsApp integration. You can connect WhatsApp Business through third-party integrations, but it's not a core feature. For WhatsApp-first marketing automation — broadcasts, drip sequences, chatbots — purpose-built tools like Wati ($59/mo), Interakt (₹999/mo), or AiSensy (₹1,500/mo) are far more capable and cost far less. Note: ReplyKaro is Instagram-only and does not support WhatsApp.",
   },
   {
     q: "What is the best HubSpot alternative for email automation?",
-    a: "ActiveCampaign is the best HubSpot alternative for sophisticated email automation. Its visual automation builder is more powerful than HubSpot's and starts at $15/month for 1,000 contacts — a fraction of HubSpot Marketing Hub's $800/month. Brevo (Sendinblue) is the best if you want something simpler and even cheaper, with a generous free plan.",
+    a: "ActiveCampaign is the best HubSpot alternative for sophisticated email automation. Its visual automation builder is more powerful than HubSpot's and starts at $15/month for 1,000 contacts — a fraction of HubSpot Marketing Hub's $890/month. Brevo (Sendinblue) is the best if you want something simpler and even cheaper, with a generous free plan.",
   },
 ];
 
@@ -274,14 +277,14 @@ export default function HubSpotAlternativePage() {
               <span style={{ color: "var(--accent)" }}>CRM & Marketing Automation for the Rest of Us</span>
             </h1>
             <p className="text-lg mb-6" style={{ color: "var(--text-secondary)", maxWidth: "700px" }}>
-              HubSpot Marketing Hub starts at $800/month for real automation features. These alternatives
+              HubSpot Marketing Hub starts at $890/month for real automation features. These alternatives
               give you CRM, email marketing, and automation at a price that makes sense for your stage.
             </p>
 
             <div className="p-4 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
               <p className="text-sm font-semibold mb-2">Quick picks:</p>
               <ul className="space-y-1 text-sm" style={{ color: "var(--text-secondary)" }}>
-                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>WhatsApp marketing (India):</span> ReplyKaro — ₹99/mo, free plan, WhatsApp + Instagram</li>
+                <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Instagram DM automation (India):</span> ReplyKaro — ₹99/mo, free plan, Instagram-only</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best email automation:</span> ActiveCampaign — $15/mo, more powerful than HubSpot's automation</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best free option:</span> Brevo — 300 emails/day free, unlimited contacts</li>
                 <li><span className="font-medium" style={{ color: "var(--foreground)" }}>Best for agencies:</span> GoHighLevel — $97/mo flat, white-label CRM</li>
@@ -293,7 +296,7 @@ export default function HubSpotAlternativePage() {
             <h2 className="font-display text-2xl font-bold mb-4">Why Teams Look for HubSpot Alternatives</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { title: "Pricing jumps sharply", desc: "Free CRM is good, but Marketing Hub Professional starts at $800/mo. That's a huge jump from free. Most alternatives offer real automation at $15–$100/mo." },
+                { title: "Pricing jumps sharply", desc: "Free CRM is good, but Marketing Hub Professional starts at $890/mo. That's a huge jump from free. Most alternatives offer real automation at $15–$100/mo." },
                 { title: "Per-contact pricing", desc: "HubSpot charges more as your contact list grows. At 10,000 contacts, Marketing Hub Pro can exceed $1,000/mo. ActiveCampaign and Brevo are a fraction of that." },
                 { title: "No WhatsApp focus", desc: "HubSpot's WhatsApp integration is limited and requires workarounds. For WhatsApp-first marketing, purpose-built tools cost 90% less and do far more." },
               ].map((item) => (

@@ -5,7 +5,7 @@ import { Check, X, Star, ArrowRight, ChevronRight, Zap } from "lucide-react";
 export const metadata: Metadata = {
   title: "7 Best Ahrefs Alternatives in 2026 (SEO Tools Compared) — GoPinKaro",
   description:
-    "Ahrefs alternatives compared honestly: pricing, backlink data, keyword research, and rank tracking. Ahrefs starts at $129/mo — these SEO tools cost less. Updated September 2026.",
+    "Ahrefs alternatives compared honestly: pricing, backlink data, keyword research, and rank tracking. Ahrefs Lite starts at $129/mo (Starter $29/mo but limited) — these SEO tools do more for less. Updated September 2026.",
   keywords: [
     "ahrefs alternative",
     "ahrefs alternatives",
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "7 Best Ahrefs Alternatives in 2026 (SEO Tools Compared)",
     description:
-      "Ahrefs starts at $129/mo and locks key features behind higher tiers. These SEO tools deliver comparable data for less.",
+      "Ahrefs added a $29/mo Starter plan in January 2026, but Lite ($129/mo) is needed for real SEO work. These alternatives deliver comparable data for less.",
     type: "article",
   },
   alternates: {
@@ -170,7 +170,7 @@ const FAQS = [
   },
   {
     q: "What is cheaper than Ahrefs but still good?",
-    a: "Mangools (KWFinder) at $29/mo and Ubersuggest at $29/mo are the cheapest alternatives with real SEO data. SE Ranking at $65/mo offers the best value for agencies needing white-label reports and daily rank tracking. Moz Pro at $99/mo is $30 cheaper than Ahrefs with a better user experience for beginners.",
+    a: "Ahrefs added a $29/mo Starter plan in January 2026, but crawl limits and keyword rows are so restricted that most SEOs consider it a taster, not a working plan — Lite ($129/mo) is still the real minimum. For genuine alternatives: Mangools (KWFinder) at $29/mo and Ubersuggest at $29/mo both offer more usable keyword research at that price. SE Ranking at $65/mo is the best value for agencies needing daily rank tracking. Moz Pro at $99/mo has a better UI for beginners.",
   },
   {
     q: "Ahrefs vs Semrush — which is better?",
@@ -274,9 +274,9 @@ export default function AhrefsAlternativePage() {
               <span style={{ color: "var(--accent)" }}>SEO Tools Compared Honestly</span>
             </h1>
             <p className="text-lg mb-6" style={{ color: "var(--text-secondary)", maxWidth: "700px" }}>
-              Ahrefs starts at $129/month and is one of the best SEO tools. But not everyone needs all its
-              features — or wants to pay that price. These alternatives cover keyword research, backlinks,
-              and rank tracking for less.
+              Ahrefs added a $29/mo Starter plan in January 2026, but Lite ($129/mo) is still needed for
+              serious SEO work — crawl limits and keyword data are heavily restricted on Starter. These
+              alternatives cover keyword research, backlinks, and rank tracking at a price that makes more sense.
             </p>
 
             <div className="p-4 rounded-xl border" style={{ background: "var(--surface)", borderColor: "var(--border)" }}>
@@ -294,7 +294,7 @@ export default function AhrefsAlternativePage() {
             <h2 className="font-display text-2xl font-bold mb-4">Why Teams Look for Ahrefs Alternatives</h2>
             <div className="grid sm:grid-cols-3 gap-4">
               {[
-                { title: "Price — $129/mo minimum", desc: "Ahrefs Lite at $129/mo has limitations on crawl limits and features. The Standard plan (most need) is $249/mo. That's $1,500–$3,000/year before any content or link building budget." },
+                { title: "Price — $29/mo Starter, but $129/mo for real use", desc: "Ahrefs launched a $29/mo Starter plan in January 2026, but crawl limits and keyword report rows are heavily restricted. Ahrefs Lite ($129/mo) is the minimum for actual SEO work. Standard plan (most professionals need) is $249/mo — that's $1,500–$3,000/year." },
                 { title: "Data you don't need", desc: "Most small teams use 20% of Ahrefs' features. If you mainly need keyword research and basic rank tracking, cheaper tools cover that without paying for a full backlink intelligence suite." },
                 { title: "No done-for-you option", desc: "Tools give you data, not results. Many SaaS founders buy Ahrefs, look at dashboards, and never publish content. An SEO agency turns data into rankings — no tool subscription needed." },
               ].map((item) => (

@@ -75,19 +75,68 @@ export async function generateMetadata({
     alternates[loc] = loc === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${loc}`;
   });
 
+  const pageUrl = locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`;
+
   return {
-    title: meta.title,
+    metadataBase: new URL(BASE_URL),
+    title: {
+      default: meta.title,
+      template: "%s | GoPinKaro",
+    },
     description: meta.description,
-    keywords: ["SaaS SEO agency", "alternative page SEO", "b2b saas seo", "SaaS SEO agency India"],
+    keywords: [
+      "SaaS SEO agency",
+      "alternative page SEO",
+      "b2b saas seo",
+      "SaaS SEO agency India",
+      "gopinkaro",
+      "competitor alternative pages",
+      "rank alternative pages",
+    ],
+    authors: [{ name: "GoPinKaro", url: BASE_URL }],
+    creator: "GoPinKaro",
+    publisher: "GoPinKaro",
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: { index: true, follow: true, "max-video-preview": -1, "max-image-preview": "large", "max-snippet": -1 },
+    },
     alternates: {
-      canonical: locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`,
+      canonical: pageUrl,
       languages: alternates,
     },
     openGraph: {
       title: meta.title,
       description: meta.description,
       type: "website",
-      url: locale === routing.defaultLocale ? BASE_URL : `${BASE_URL}/${locale}`,
+      url: pageUrl,
+      siteName: "GoPinKaro",
+      locale: meta.lang,
+      images: [
+        {
+          url: "/og-image.png",
+          width: 1200,
+          height: 630,
+          alt: "GoPinKaro — SaaS SEO Agency: 0 → 315 clicks/day in 90 days",
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: meta.title,
+      description: meta.description,
+      site: "@gopinkaro",
+      creator: "@gopinkaro",
+      images: ["/og-image.png"],
+    },
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon-16x16.png",
+      apple: "/apple-touch-icon.png",
+    },
+    manifest: "/site.webmanifest",
+    verification: {
+      google: "google-site-verification",
     },
   };
 }
@@ -108,8 +157,32 @@ export default async function LocaleLayout({
   const meta = LOCALE_META[locale as Locale] ?? LOCALE_META.en;
   const isRtl = locale === "ar";
 
+  const orgSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "GoPinKaro",
+    url: BASE_URL,
+    logo: `${BASE_URL}/logo.svg`,
+    description: "SaaS SEO agency specializing in alternative page SEO. We rank '[Competitor] Alternative' pages to drive organic traffic.",
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: "hello@gopinkaro.com",
+      contactType: "customer support",
+    },
+    sameAs: [
+      "https://twitter.com/gopinkaro",
+      "https://linkedin.com/company/gopinkaro",
+    ],
+  };
+
   return (
     <html lang={meta.lang} dir={isRtl ? "rtl" : "ltr"}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
+      </head>
       <body>
         <NextIntlClientProvider messages={messages}>
           {children}
